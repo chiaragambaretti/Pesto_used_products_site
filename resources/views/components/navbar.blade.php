@@ -18,7 +18,10 @@
                     <a class="nav-link" href="{{ route('login')}}">Login</a>
                 </li>
                 @else
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('announcement.create')}}">Inserisci annuncio</a>
+                </li>
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
                     </a>
@@ -28,7 +31,7 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
-                </li> 
+                </li>  --}}
                 <form action="{{route('logout')}}" method="post">
                     @csrf
                     <button class="btn btn-danger">Logout</button>

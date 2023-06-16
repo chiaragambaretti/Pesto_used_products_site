@@ -17,4 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-
+//rotta nuovo annuncio
+Route::get('/new/announcement', function () {
+    return view('announcement.create');
+})->name('announcement.create');
