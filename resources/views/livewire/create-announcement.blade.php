@@ -33,7 +33,7 @@
     
     <div class="mb-3">
       <label for="InputPrice" class="form-label">Inserisci prezzo</label>
-      <input type="number" name="price" wire:model="price" class="form-control" id="InputPrice">
+      <input type="number" step="any" name="price" wire:model="price" class="form-control" id="InputPrice">
       {{-- errore nell'inserimento dei campi --}}
       @error('price') <span class="error">{{ $message }}</span> @enderror
     </div>

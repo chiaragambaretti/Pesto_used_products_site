@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [FrontController::class, 'welcome'])->name('home');
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
 
 //rotta inserimento nuovo annuncio
 Route::middleware(['auth'])->group(function(){
