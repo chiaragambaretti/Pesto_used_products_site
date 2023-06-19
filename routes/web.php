@@ -18,6 +18,9 @@ Route::get('/', function () {
 })->name('home');
 
 //rotta inserimento nuovo annuncio
-Route::get('/new/announcement', function () {
-    return view('announcement.create');
-})->name('announcement.create');
+Route::middleware(['auth'])->group(function(){
+
+    Route::get('/new/announcement', function () {
+        return view('announcement.create');
+    })->name('announcement.create');
+});

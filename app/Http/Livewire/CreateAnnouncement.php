@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Announcement;
+use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
@@ -26,8 +27,11 @@ class CreateAnnouncement extends Component
     //messagio errato inserimento campi
     protected $messages = [
         'required' => 'Il campo :attribute deve essere inserito correttamente.',
-        'min' => 'Il campo :attribute deve essere di almeno :min caratteri.',
-        'numeric'=>'Il campo :attribute deve essere un numero'
+        'numeric'=>'Il campo :attribute deve essere un numero',
+        'min' =>[
+            'numeric' => 'Il campo :attribute deve essere di almeno :min €',
+            'string'=> 'Il campo :attribute deve essere di almeno :min caratteri.'
+        ]
     ];
     //modifica valore rules
     protected $validationAttributes = [
@@ -39,11 +43,19 @@ class CreateAnnouncement extends Component
 
 
     public function store(){
-        Announcement::create([
+
+        // $category = Category::find($this->category);
+
+        $announcement = Announcement::create([
             'title'=>$this->title,
             'body'=>$this->body,
             'price'=>$this->price
         ]);
+
+        // collegamento nella tabella announcements con user_id
+        Auth::user()->announcements()->save($announcement);
+
+        
 
         $this->validate();
         $this->reset();
