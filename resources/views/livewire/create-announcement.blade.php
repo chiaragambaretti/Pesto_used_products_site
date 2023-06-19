@@ -5,7 +5,6 @@
           {{ session('message') }}
       </div>
     @endif
-
   <form wire:submit.prevent="store">
     @csrf
     <div class="mb-3">

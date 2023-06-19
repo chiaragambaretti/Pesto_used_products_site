@@ -44,6 +44,8 @@ class CreateAnnouncement extends Component
     ];
 
     public function store(){
+        $this->validate();
+        
         
         $category = Category::find($this->category);
         
@@ -54,14 +56,13 @@ class CreateAnnouncement extends Component
         ]);
 
         // collegamento nella tabella announcements con user_id
+        // ERRORE
         Auth::user()->announcements()->save($announcement);
-
-        $this->validate();
+        
         $this->reset();
         session()->flash('message', 'Annuncio inserito correttamente.');
-
+        
     }
-
 
 
     public function render()
