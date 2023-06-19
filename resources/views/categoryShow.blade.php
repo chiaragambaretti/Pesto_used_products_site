@@ -9,10 +9,11 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>
                         {{-- riempire l'href --}}
+                        
                         <p class="card-text">Categoria: {{$announcement->category->name}}</p>
                         <p class="card-text">Prezzo: €{{$announcement->price}}</p>
                         <p class="card-text">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
-                        <a href="#" class="btn btn-primary">Visualizza</a>
+                        <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-primary">Visualizza</a>
                     </div>
                 </div>
             </div>

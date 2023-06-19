@@ -19,7 +19,10 @@
                         <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
                         @endforeach
                     </ul>
-                </li> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route('announcement.index')}}">Tutti gli annunci</a>
+                </li>
                 @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('register')}}">Registrati</a>
@@ -37,10 +40,10 @@
                 </form>
                 @endguest       
             </ul>
-            <form class="d-flex" role="search">
+            {{-- <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Cerca</button>
-            </form>
+            </form> --}}
         </div>
     </div>
 </nav>

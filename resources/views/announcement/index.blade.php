@@ -1,7 +1,6 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            <h1>Presto.it</h1>
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-4 mt-5">
                 <div class="card" style="width: 18rem;">
@@ -16,6 +15,11 @@
                 </div>
             </div>
             @endforeach
+            <div class="row my-4">
+                {{$announcements->links()}}
+
+            </div>
         </div>
     </div>
+    
 </x-layout>

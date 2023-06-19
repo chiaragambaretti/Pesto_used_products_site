@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Models\Announcement;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,10 @@ use App\Http\Controllers\FrontController;
 
 Route::get('/', [FrontController::class, 'welcome'])->name('home');
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
+Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcement.index');
+
+
 
 //rotta inserimento nuovo annuncio
 Route::middleware(['auth'])->group(function(){
