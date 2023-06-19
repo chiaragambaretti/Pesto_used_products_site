@@ -14,7 +14,17 @@
       {{-- errore nell'inserimento dei campi --}}
       @error('title') <span class="error">{{ $message }}</span> @enderror
     </div>
-    
+
+    <div>
+    <label for="category" class="form-label">Inserisci titolo</label>
+    <select class="form-select" id="category" aria-label="Default select example" wire:model.defer='category'>
+      <option selected>Scegli Categoria</option>
+      @foreach($categories as $category)
+      <option value="{{$category->id}}">{{$category->name}}</option> 
+      @endforeach 
+    </select>
+    </div>
+
     <div class="mb-3">
       <label  for="floating">Inserisci descrizione</label>
       <textarea class="form-control" name="body" wire:model="body" id="floating" style="height: 100px"></textarea>

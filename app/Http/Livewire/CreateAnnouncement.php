@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,13 +13,15 @@ class CreateAnnouncement extends Component
     public $title; 
     public $body;
     public $price;
+    public $category;
 
 
     //validazioni
     protected $rules=[
         'title'=>'required|min:4',
         'body'=>'required|min:10',
-        'price'=>'required|numeric|min:0.01|max:999999.99'
+        'price'=>'required|numeric|min:0.01|max:999999.99',
+        'category'=> 'required'
     ];
     //mostra errore inserimento campi in tempo reale
     public function updated($propertyName){
@@ -40,13 +43,11 @@ class CreateAnnouncement extends Component
         'price'=>'prezzo'
     ];
 
-
-
     public function store(){
-
-        // $category = Category::find($this->category);
-
-        $announcement = Announcement::create([
+        
+        $category = Category::find($this->category);
+        
+        $announcement = $category->announcements()->create([
             'title'=>$this->title,
             'body'=>$this->body,
             'price'=>$this->price
@@ -54,8 +55,6 @@ class CreateAnnouncement extends Component
 
         // collegamento nella tabella announcements con user_id
         Auth::user()->announcements()->save($announcement);
-
-        
 
         $this->validate();
         $this->reset();
