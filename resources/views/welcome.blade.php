@@ -1,9 +1,8 @@
 <x-layout>
     <div class="container">
-        <div class="row">
-            <h1>Presto.it</h1>
+        <div class="row my-5">
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-4 mt-5">
+            <div class="col-12 col-md-4 mt-5 justify-content-center d-flex">
                 <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="{{$announcement->title}}">
                     <div class="card-body">

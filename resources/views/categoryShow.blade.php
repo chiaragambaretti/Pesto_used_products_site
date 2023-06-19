@@ -1,9 +1,9 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            <h1>{{$category->name}}</h1>
+            <h1 class="text-center my-4">{{$category->name}}</h1>
             @forelse ($category->announcements as $announcement)
-            <div class="col-12 col-md-4 mt-5">
+            <div class="col-12 col-md-4 mt-5 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="{{$announcement->title}}">
                     <div class="card-body">
@@ -18,9 +18,9 @@
                 </div>
             </div>
             @empty
-                <div class="col-12">
-                    <p class="h1">Non sono presenti annunci per questa categoria!</p>
-                    <p class="h2"><a class="btn btn-success shadow" href="{{route('announcement.create')}}">Pubblicane uno</a></p>
+                <div class="col-12 text-center my-5">
+                    <p class="h4">Non sono presenti annunci per questa categoria!</p>
+                    <p class="h2 my-4"><a class="btn btn-success shadow" href="{{route('announcement.create')}}">Pubblicane uno</a></p>
                 </div>
             @endforelse
         </div>

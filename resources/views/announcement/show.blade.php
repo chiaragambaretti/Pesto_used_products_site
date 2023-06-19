@@ -1,8 +1,7 @@
 <x-layout>
 <div class="container my-5">
-    <div class="row">
+    <div class="row ">
         <div class="col-12 col-md-6">
-            
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -39,8 +38,10 @@
         </div>
     </div>
     <div class="row my-3">
+      <div class="col-12 col-md-6">
         <h3>Descrizione</h3>
         <p>{{$announcement->body}}</p>
+      </div>
     </div>
 </div>
 </x-layout>

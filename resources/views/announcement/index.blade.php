@@ -1,8 +1,9 @@
 <x-layout>
     <div class="container">
-        <div class="row">
+        <div class="row my-5">
+            <h1 class="text-center">Tutti gli annunci</h1>
             @foreach ($announcements as $announcement)
-            <div class="col-12 col-md-4 mt-5">
+            <div class="col-12 col-md-4 mt-5 justify-content-center d-flex">
                 <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="{{$announcement->title}}">
                     <div class="card-body">
@@ -15,9 +16,10 @@
                 </div>
             </div>
             @endforeach
-            <div class="row my-4">
-                {{$announcements->links()}}
-
+            <div class="row my-5">
+                <div class="col-12 d-flex justify-content-center">
+                    {{$announcements->links()}}
+                </div>             
             </div>
         </div>
     </div>
