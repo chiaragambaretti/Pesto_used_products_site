@@ -34,6 +34,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('announcement.create')}}">Inserisci annuncio</a>
                 </li>
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
+                        Zona revisore
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{-- contatore articoli da accettare --}}
+                            {{App\Models\Announcement::toBeRevisionedCount()}}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+                </li>
+                @endif
                 <form action="{{route('logout')}}" method="post">
                     @csrf
                     <button class="btn btn-danger">Logout</button>

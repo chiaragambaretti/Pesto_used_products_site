@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {   
+        //creazione colonna revisor (ha lo scopo di assegnare il ruolo di revisore ad un utente)
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('is_revisor')->default(false);
         });
@@ -20,7 +21,8 @@ return new class extends Migration
      * Reverse the migrations.
      */
     public function down(): void
-    {
+    {   
+        //rimozione colonna revisor
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('is_revisor');
         });

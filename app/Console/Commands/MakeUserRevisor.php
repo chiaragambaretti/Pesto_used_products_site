@@ -12,6 +12,7 @@ class MakeUserRevisor extends Command
      *
      * @var string
      */
+    //creazione comando (presto) per assegnazione revisor
     protected $signature = 'presto:makeUserRevisor {email}';
 
     /**
@@ -19,13 +20,14 @@ class MakeUserRevisor extends Command
      *
      * @var string
      */
+    //messaggio di conferma accettazione revisore
     protected $description = 'Rendi un utente revisore';
 
     /**
      * Execute the console command.
      */
     public function handle()
-    {
+    {   
         $user = User::where('email', $this->argument('email'))->first();
         if (!$user){
             $this->error('Utente non trovato');
