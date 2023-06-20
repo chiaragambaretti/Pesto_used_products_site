@@ -28,8 +28,9 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 //AnnouncementController (announcement.index) si occuperà della visualizzazione di ogni singolo annuncio presente 
 Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcement.index');
 
+
 //home revisore
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 //accetta annuncio
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
 //rifiuta annuncio
@@ -44,4 +45,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/new/announcement', function () {
         return view('announcement.create');
     })->name('announcement.create');
+
 });
