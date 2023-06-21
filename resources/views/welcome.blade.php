@@ -12,7 +12,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
     <div class="container-fluid">
         <div class="row justify-content-center">
             @foreach ($categories as $category)
@@ -23,9 +22,7 @@
             @endforeach
         </div>
     </div>
-=======
  
->>>>>>> 1d91d4c5d85446adfd7f85e3336898476f9f7906
     <div class="container">
         <div class="row my-5">
             
