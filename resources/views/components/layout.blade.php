@@ -8,13 +8,25 @@
     @livewireStyles
 </head>
 <body>
-
+    
     <x-navbar/>
-
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
+    
     {{$slot}}
-
+    
     <x-footer/>
-
+    
     @livewireScripts
 </body>
 </html>

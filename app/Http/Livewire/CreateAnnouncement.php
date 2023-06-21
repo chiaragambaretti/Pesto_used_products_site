@@ -60,7 +60,7 @@ class CreateAnnouncement extends Component
         Auth::user()->announcements()->save($announcement);
         
         $this->reset();
-        session()->flash('message', 'Annuncio inserito correttamente.');
+        session()->flash('inserimentoCorretto', 'Annuncio inserito correttamente.');
         
     }
 
