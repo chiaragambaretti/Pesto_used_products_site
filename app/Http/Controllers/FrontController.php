@@ -10,7 +10,7 @@ class FrontController extends Controller
 {
     // take ci fa prendere gli ultimi 6 announcements e orderBy ce li ordina in maniera decrescente in base alla data di creazione
     public function welcome() {
-        $announcements = Announcement::where('is_accepted', true)->take(6)->orderBy('created_at', 'desc')->get();
+        $announcements = Announcement::where('is_accepted', true)->take(8)->orderBy('created_at', 'desc')->get();
         return view('welcome', compact('announcements'));
     }
 

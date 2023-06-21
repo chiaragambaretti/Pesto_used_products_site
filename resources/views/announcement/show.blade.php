@@ -32,7 +32,7 @@
         <div class="col-12 col-md-6">
             <a href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
             <p>{{$announcement->user->name ?? ''}}</p>     
-            <p>{{$announcement->created_at}}</p>
+            <p>{{$announcement->created_at->format('d/m/Y')}}</p>
             <h1>{{$announcement->title}}</h1>
             <p>Prezzo: € {{$announcement->price}}</p>
         </div>
