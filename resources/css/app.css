@@ -1,5 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 
 @import 'theme.css';
@@ -7,3 +8,8 @@
 @import './cardCustom.css';
 
 @import './navbar.css';
+=======
+@import 'theme.css';
+
+@import './header.css';
+>>>>>>> f699d2b46dea90727b2bb02a1326d6b2840794f8
