@@ -23,4 +23,8 @@ class FrontController extends Controller
 
         return view('announcement.index', compact('announcements'));
     }
+
+    public function workWithUs(){
+        return view('workWithUs');
+    }
 }

@@ -11,7 +11,7 @@
     
     <x-navbar/>
     
-    <div class="container">
+    <div class="container mt-5 text-center">
         <div class="row">
             <div class="col-12">
                 @if (session()->has('message'))
@@ -25,8 +25,12 @@
     
     {{$slot}}
     
-    <x-footer/>
+    {{-- <x-footer/> --}}
+    <hr>
+   <x-footer2></x-footer2>
     
+    <!-- JS FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/5437d26fd6.js" crossorigin="anonymous"></script>
     @livewireScripts
 </body>
 </html>

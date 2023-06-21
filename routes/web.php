@@ -37,15 +37,18 @@ Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acc
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
 
 
-//rotta inserimento nuovo annuncio
+// Middleware
 Route::middleware(['auth'])->group(function(){
-
+    //rotta inserimento nuovo annuncio
     Route::get('/new/announcement', function () {
         return view('announcement.create');
     })->name('announcement.create');
 
     // richiedi di diventare revisore
     Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+
+    // rotta che riporta alla vista lavora con noi
+    Route::get('/workwithus', [FrontController::class, 'workWithUs'])->name('workwithus');
 
 });
 
