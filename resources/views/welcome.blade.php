@@ -10,10 +10,19 @@
             </div>
         </div>
     </div>
-    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            @foreach ($categories as $category)
+            <div class="col-1">
+                <a class="text-decoration-none" href="{{route('categoryShow', ['category'=>$category])}}"><x-cardCategories
+                :category="$category"></x-cardCategories></a>
+            </div>
+            @endforeach
+        </div>
+    </div>
     <div class="container">
         <div class="row my-5">
-            <h1 class="text-center">PRESTO.IT</h1>
+            
             @foreach ($announcements as $announcement)
             <div class="col-12 col-md-4 mt-5 justify-content-center d-flex">
                 <div class="card" style="width: 18rem;">
