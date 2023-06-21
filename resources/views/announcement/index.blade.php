@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row my-5">
             <h1 class="text-center">Tutti gli annunci</h1>
-            @foreach ($announcements as $announcement)
+            @forelse ($announcements as $announcement)
             <div class="col-12 col-md-4 mt-5 justify-content-center d-flex">
                 <div class="card" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="{{$announcement->title}}">
@@ -15,7 +15,13 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+                <div class="col-12">
+                    <div class="alert alert-warning py-3 shadow">
+                        <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiarla.</p>
+                    </div>
+                </div>
+            @endforelse
             <div class="row my-5">
                 <div class="col-12 d-flex justify-content-center">
                     {{$announcements->links()}}

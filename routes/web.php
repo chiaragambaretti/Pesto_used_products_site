@@ -51,3 +51,6 @@ Route::middleware(['auth'])->group(function(){
 
 // rendi utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// ricerca annuncio
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
