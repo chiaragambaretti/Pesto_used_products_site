@@ -11,16 +11,15 @@
             
         </div>
         
-        {{-- <div class="col mb-3">
+        <div class="col mb-3">
             <h5>Section</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Presto.it</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Vuoi lavorare con noi?</a></li>
+                <li class="nav-item mb-2"><a href="{{route('become.revisor')}}" class="nav-link p-0 text-body-secondary">Registrati e clicca qui</a></li>
+            
             </ul>
-        </div>
+        </div> 
         
         <div class="col mb-3">
             <h5>Section</h5>
@@ -42,6 +41,6 @@
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
             </ul>
-        </div> --}}
+        </div> 
     </footer>
 </div>
