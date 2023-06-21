@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
         {{-- INSERIRE LOGO --}}
         <a class="navbar-brand" href="{{ route('home')}}">Presto</a>
@@ -54,7 +54,7 @@
             </ul>
             <form action="{{route('announcements.search')}}" method="GET" class="d-flex" role="search">
                 <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Cerca</button>
+                <button class="btn btn-outline-danger" type="submit">Cerca</button>
             </form>
         </div>
     </div>

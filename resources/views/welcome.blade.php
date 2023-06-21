@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             @foreach ($categories as $category)
-            <div class="col-1">
+            <div class="col-12 col-md-1">
                 <a class="text-decoration-none" href="{{route('categoryShow', ['category'=>$category])}}"><x-cardCategories
                 :category="$category"></x-cardCategories></a>
             </div>
