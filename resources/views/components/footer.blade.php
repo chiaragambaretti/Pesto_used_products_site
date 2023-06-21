@@ -8,15 +8,10 @@
         </div>
         
         <div class="col mb-3">
-            
-        </div>
-        
-        <div class="col mb-3">
             <h5>Lavora con noi</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Presto.it</a></li>
                 <li class="nav-item mb-2"><a href="{{route('become.revisor')}}" class="nav-link p-0 text-body-secondary">Registrati e clicca qui</a></li>
-            
             </ul>
         </div> 
     </footer>
