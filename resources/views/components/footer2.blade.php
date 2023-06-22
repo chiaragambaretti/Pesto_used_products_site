@@ -9,7 +9,7 @@
         </ul>
         <a href="{{route('home')}}" class="text-decoration-none fw-bold" style="color: #ffffff"><h5 class="text-center">Presto.it</a></h5>
         <ul class="menu fw-bold">  
-            <li><a class="text-decoration-none" href="">Presto team</a></li>
+            {{-- <li><a class="text-decoration-none" href="">Presto team</a></li> --}}
             <li><a class="text-decoration-none" href="{{route('workwithus')}}">Vuoi lavorare con noi?</a></li>
         </ul>
 
