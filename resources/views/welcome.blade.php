@@ -12,10 +12,20 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            @foreach ($categories as $category)
+            <div class="col-12 col-md-1">
+                <a class="text-decoration-none" href="{{route('categoryShow', ['category'=>$category])}}"><x-cardCategories
+                :category="$category"></x-cardCategories></a>
+            </div>
+            @endforeach
+        </div>
+    </div>
  
     <div class="container">
         <div class="row my-5">
-            <h1 class="text-center">PRESTO.IT</h1>
+            
             @foreach ($announcements as $announcement)
 
            <x-card :announcement="$announcement"></x-card>

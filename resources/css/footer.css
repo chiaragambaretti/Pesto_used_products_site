@@ -1,0 +1,47 @@
+footer{
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    background-color: black;
+}
+
+footer .social-icons,
+footer .menu
+
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    list-style-type: none;
+      
+}
+
+footer .social-icons li,
+footer .menu li
+{
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+    
+}
+
+footer .social-icons li:hover{
+    transform: translateY(-10px);
+    
+}
+
+footer .menu li a{
+    color: white;
+    opacity: 0.70;
+}
+
+footer .menu li a:hover{
+    opacity: 1;
+}
+
+:root{
+    --color-black: rgb(0, 0, 0);
+}
