@@ -11,23 +11,23 @@
     
     <x-navbar/>
     
-    <div class="container mt-5 text-center">
-        <div class="row">
-            <div class="col-12">
-                @if (session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
+    <main>
+        <div class="container mt-5 text-center">
+            <div class="row">
+                <div class="col-12">
+                    @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                    @endif
                 </div>
-                @endif
             </div>
         </div>
-    </div>
-    
-    {{$slot}}
-    
-    {{-- <x-footer/> --}}
-    <hr>
-   <x-footer2></x-footer2>
+        
+        {{$slot}}
+        
+    </main>
+    <x-footer/>
     
     <!-- JS FONT AWESOME -->
     <script src="https://kit.fontawesome.com/5437d26fd6.js" crossorigin="anonymous"></script>

@@ -1,18 +1,19 @@
-<div class="container">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-        <div class="col mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <p class="text-body-secondary">© 2023</p>
+<footer class="container-fluid bg-dark ">
+    <div class="row justify-content-around">    
+        <div col-12 col-sm-6>
+            <ul class="social-icons">   
+                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff"></i></a></li>
+                <li><a href="https://it-it.facebook.com/"><i class="fa-brands fa-facebook fa-xl" style="color: #ffffff"></i></a></li>
+                <li><a href="https://twitter.com/?lang=it"><i class="fa-brands fa-twitter fa-xl" style="color: #ffffff"></i></a></li>
+                <li><a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fit-IT&lang=en&enter_method=mandatory"><i class="fa-brands fa-tiktok fa-xl" style="color: #ffffff;"></i></a></li>
+            </ul>
+            <a href="{{route('home')}}" class="text-decoration-none fw-bold" style="color: #ffffff"><h5 class="text-center">Presto.it</a></h5>
+            <ul class="menu fw-bold">  
+                {{-- <li><a class="text-decoration-none" href="">Presto team</a></li> --}}
+                <li><a class="text-decoration-none" href="{{route('workwithus')}}">Vuoi lavorare con noi?</a></li>
+            </ul>
+            
         </div>
         
-        <div class="col mb-3">
-            <h5>Lavora con noi</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Presto.it</a></li>
-                <li class="nav-item mb-2"><a href="{{route('become.revisor')}}" class="nav-link p-0 text-body-secondary">Registrati e clicca qui</a></li>
-            </ul>
-        </div> 
-    </footer>
-</div>
+    </div>
+</footer>
