@@ -27,4 +27,9 @@ class FrontController extends Controller
     public function workWithUs(){
         return view('workWithUs');
     }
+
+    public function setLanguage($lang){
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

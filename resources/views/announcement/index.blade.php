@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row my-5">
-            <h1 class="text-center">Tutti gli annunci</h1>
+            <h1 class="text-center">{{__('ui.allAnnouncements')}}</h1>
             @forelse ($announcements as $announcement)
             <x-card :announcement="$announcement"></x-card>
             @empty
