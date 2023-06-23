@@ -2,7 +2,7 @@
     <div class="center">
         <div class="property-card">
             <a href="{{route('announcement.show', compact('announcement'))}}">
-                <div class="property-image">
+                <div class="property-image" style="background-image:url('{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/1200'}}');">
                     {{-- <div class="property-image-title">
                         <button class="card-text btn btn-danger btnCustom w-75" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</button>         
                     </div> --}}

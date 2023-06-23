@@ -17,8 +17,7 @@
     </div>
 
     <div>
-    <label for="category" class="form-label">Inserisci titolo</label>
-    <select class="form-select @error('category') is-invalid @enderror" id="category" aria-label="Default select example" wire:model.defer='category'>
+    <select class="mb-3 form-select @error('category') is-invalid @enderror" id="category" aria-label="Default select example" wire:model.defer='category'>
       <option selected>Scegli Categoria</option>
       @foreach($categories as $category)
       <option value="{{$category->id}}">{{$category->name}}</option> 

@@ -12,6 +12,15 @@
         <div class="row ">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleCaptions" class="carousel slide">
+                    @if (count($announcement_to_check->images))
+                    <div class="carousel-inner">
+                        @foreach ($announcement_to_check->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="{{$announcement_to_check->title}}">
+                        </div>
+                        @endforeach
+                    </div>
+                    @else            
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -30,6 +39,7 @@
                             <img src="https://picsum.photos/1200/603" class="img-fluid rounded" alt="{{$announcement_to_check->title}}">
                         </div>  
                     </div>
+                    @endif    
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>

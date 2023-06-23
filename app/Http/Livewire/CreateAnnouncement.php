@@ -18,6 +18,7 @@ class CreateAnnouncement extends Component
     public $category;
     public $temporary_images;
     public $images = [];
+    public $announcement;
     public $image;
 
 
@@ -32,9 +33,11 @@ class CreateAnnouncement extends Component
         'temporary_images.*' => 'image|max:5120',
     ];
     //mostra errore inserimento campi in tempo reale
+
     public function updated($propertyName){
         $this->validateOnly($propertyName);
     }
+
     //messagio errato inserimento campi
     protected $messages = [
         'required' => 'Il campo :attribute deve essere inserito correttamente.',
@@ -62,24 +65,26 @@ class CreateAnnouncement extends Component
         
         $category = Category::find($this->category);
         
-        $announcement = $category->announcements()->create([
+        $this->announcement = $category->announcements()->create([
             'title'=>$this->title,
             'body'=>$this->body,
             'price'=>$this->price
         ]);
         if(count($this->images)){
-            foreach( $this->images as $image){
-                $announcement->images()->create(['path' =>$image->store('images', 'public')]);
+            foreach($this->images as $image){
+                $this->announcement->images()->create(['path' =>$image->store('images', 'public')]);
             }
             
         }
 
         // collegamento nella tabella announcements con user_id
         // ERRORE
-        Auth::user()->announcements()->save($announcement);
+        $this->announcement->user()->associate(Auth::user())->save();
+        // vecchio modo:
+        // Auth::user()->announcements()->save($this->announcement);
         
         $this->reset();
-        session()->flash('inserimentoCorretto', 'Annuncio inserito correttamente.');
+        session()->flash('inserimentoCorretto', 'Annuncio inserito correttamente, sarà pubblicato dopo la revisione.');
         
     }
 

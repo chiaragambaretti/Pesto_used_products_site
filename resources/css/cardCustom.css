@@ -65,7 +65,7 @@ p
   -webkit-transition:all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:url('https://picsum.photos/1200');
+  /* background-image:url('https://picsum.photos/1200'); */
   background-size:cover;
   background-repeat:no-repeat;
 }
@@ -91,7 +91,7 @@ p
 
 .property-card:hover .property-description
 {
-  height:4em;
+  height:3.5em;
   padding:0px 1em;
 }
 .property-card:hover .property-image
