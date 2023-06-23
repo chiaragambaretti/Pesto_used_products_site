@@ -3,7 +3,7 @@
         <div class="row my-5">
             <h1 class="text-center">{{__('ui.allAnnouncements')}}</h1>
             @forelse ($announcements as $announcement)
-            <x-card :announcement="$announcement"></x-card>
+            <x-cardAnnunci :announcement="$announcement"></x-cardAnnunci>
             @empty
                 <div class="col-12">
                     <div class="alert alert-warning py-3 shadow">

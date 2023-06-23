@@ -4,7 +4,7 @@
             <h1 class="text-center my-4">{{$category->name}}</h1>
             @forelse ($category->announcements as $announcement)
 
-            <x-card :announcement="$announcement"></x-card>
+            <x-cardAnnunci :announcement="$announcement"></x-cardAnnunci>
             
             @empty
                 <div class="col-12 text-center my-5">
