@@ -27,6 +27,7 @@
         {{$slot}}
         
     </main>
+    
     <x-footer/>
     
     <!-- JS FONT AWESOME -->

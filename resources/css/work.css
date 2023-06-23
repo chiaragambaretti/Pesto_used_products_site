@@ -1,0 +1,48 @@
+.div-custom{
+    height: 5vh;
+    background: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(248, 134, 3));
+}
+
+.btn-revisor{
+    background-color: rgb(204, 2, 2);
+    color: white;
+    width: 300px;
+    height: 50px;
+}
+
+.a-work{
+    margin-top: 100px;
+}
+
+.btn-revisor:hover{
+    background-color: rgba(168, 0, 0, 0.993);
+    color: white;
+}
+
+.img-work{
+    width: 600px;
+}
+
+.p-work{
+    text-align: center;
+}
+.header-custom-work{
+    background: url(./img/lavora-con-noi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    /* position: relative; */
+    height: 80vh;
+}
+
+@media screen and (max-width: 1080px){
+    .header-custom{
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .header-custom{
+        height: 40vh;
+    }
+}
