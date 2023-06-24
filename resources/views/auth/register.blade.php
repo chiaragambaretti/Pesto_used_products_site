@@ -64,7 +64,7 @@
                     </div>
                     <button class="buttonRegister" type="submit">{{__('ui.navRegister')}}</button>
                     <div class="register-link">
-                        <p>Hai già un Account? <a href="#">Accedi</a></p>
+                        <p>Hai già un Account? <a href="{{route('login')}}">Accedi</a></p>
                     </div> 
                 </form>
             </div>
