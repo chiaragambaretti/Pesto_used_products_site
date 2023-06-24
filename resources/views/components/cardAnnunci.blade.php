@@ -1,14 +1,14 @@
-<section style="background-color: #eee;">
-    <div class="container py-1">
-      <div class="row justify-content-end mb-3">
+<section>
+    <div class="container mb-3 py-1">
+      <div class="row justify-content-center mb-3">
         <div class="col-md-8">
-          <div class="card shadow-0 border rounded-3">
+          <div class="card shadow-0 border roundedCustom">
             <div class="card-body">
               <div class="row">
                 <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                   <div class="bg-image hover-zoom ripple rounded ripple-surface">
                     <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/1200'}}"
-                      class="w-100" />
+                      class="w-100 roundedCustom" />
                     <a href="#!">
                       <div class="hover-overlay">
                         <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
@@ -35,12 +35,13 @@
                     <h4 class="mb-1 me-1">€{{$announcement->price}}</h4>
                     
                   </div>
-                  <h6 class="text-success">Free shipping</h6>
+                  <h6 class="text-success">Spedizione gratuita</h6>
                   <div class="d-flex flex-column mt-4">
-                    <button class="btn btn-primary btn-sm" type="button">Details</button>
-                    <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+                   
+                    <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-primary btn-sm" type="button">Dettagli</a>
+                    {{-- <button class="btn btn-outline-primary btn-sm mt-2" type="button">
                       Add to wishlist
-                    </button>
+                    </button> --}}
                   </div>
                 </div>
               </div>
