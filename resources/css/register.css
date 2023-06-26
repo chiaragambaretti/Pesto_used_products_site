@@ -10,32 +10,18 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url(./img/register.jpg);
+    background: url(./img/sfondo1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    animation: animateBg 5s linear infinite;
 }
 
-@keyframes animateBg{
-    100%{
-        filter: hue-rotate(360deg);
-    }
-}
-
-h2{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #fff;
-}
-
-.login-box{
+.register-box{
     position: relative;
     width: 400px;
-    height: 450px;
+    height: 550px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, .5);
+    border: 2px solid rgba(183, 183, 183, 0.5);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -43,66 +29,61 @@ h2{
     backdrop-filter: blur(15px);
 }
 
-.input-box{
+.register-input-box{
     position: relative;
     width: 310px;
     margin: 30px 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgba(183, 183, 183, 0.5);
 }
 
-.input-box label{
+.register-input-box label{
     position: absolute;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
     font-size: 1rem;
-    color: #fff;
+    color: black;
     pointer-events: none;
     transition: .5s;
 }
 
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
-}
-
-.input-box input{
+.register-input-box input{
     width: 100%;
     height: 50px;
     background: transparent;
     border: none;
     outline: none;
     font-size: 1rem;
-    color: #fff;
+    color: black;
     padding: 0 35px 0 5px;
 }
 
-.input-box .icon{
+.register-input-box .icon{
     position: absolute;
     right: 8px;
-    color: #fff;
+    color: black;
     font-size: 1.2rem;
     line-height: 57px;
 }
 
-.remember-forgot{
+.register-remember-password{
     margin: -15px 0 15px;
     font-size: .9rem;
-    color: #fff;
+    color: black;
     display: flex;
     justify-content: space-between;
 }
 
-.remember-forgot label input{
+.register-remember-password label input{
     margin: 3px;
 }
 
-.remember-forgot a{
+.register-remember-password a{
     color: #fff;
     text-decoration: none;
 }
 
-.remember-forgot a:hover{
+.register-remember-password a:hover{
     text-decoration: underline;
 }
 
@@ -110,7 +91,7 @@ h2{
     width: 100%;
     height: 40px;
     background: #fff;
-    border: none;
+    border: 2px solid rgba(183, 183, 183, 0.5);
     outline: none;
     border-radius: 40px;
     cursor: pointer;
@@ -134,17 +115,4 @@ h2{
 
 .register-link p a:hover{
     text-decoration: underline;
-}
-
-@media (max-width: 390px){
-    .login-box {
-        width: 100%;
-        height: 100vh;
-        border: none;
-        border-radius: 0;
-    }
-
-    .input-box{
-        width: 290px;
-    }
 }

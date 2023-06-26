@@ -1,7 +1,14 @@
 body{
-    @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } }
+    font-family: 'Manrope', sans-serif;
+    background: url(./img/sfondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .roundedCustom{
     border-radius: 16px;
+}
+
+.btn-index{
+    background-color: lightskyblue;
 }

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
 }
 
 .sectionLogin{
@@ -10,7 +11,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url(./img/login.jpg);
+    background: url(./img/sfondo1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,31 +24,24 @@
     }
 } */
 
-h2{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #fff;
-}
-
 .login-box{
     position: relative;
     width: 400px;
     height: 450px;
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, .5);
+    border: 2px solid rgba(183, 183, 183, 0.5);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
 }
 
 .input-box{
     position: relative;
     width: 310px;
     margin: 30px 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgba(183, 183, 183, 0.5);
 }
 
 .input-box label{
@@ -56,7 +50,7 @@ h2{
     left: 5px;
     transform: translateY(-50%);
     font-size: 1rem;
-    color: #fff;
+    color: black;
     pointer-events: none;
     transition: .5s;
 }
@@ -73,14 +67,14 @@ h2{
     border: none;
     outline: none;
     font-size: 1rem;
-    color: #fff;
+    color: black;
     padding: 0 35px 0 5px;
 }
 
 .input-box .icon{
     position: absolute;
     right: 8px;
-    color: #fff;
+    color: black;
     font-size: 1.2rem;
     line-height: 57px;
 }
@@ -88,7 +82,7 @@ h2{
 .remember-forgot{
     margin: -15px 0 15px;
     font-size: .9rem;
-    color: #fff;
+    color: black;
     display: flex;
     justify-content: space-between;
 }
@@ -110,7 +104,7 @@ h2{
     width: 100%;
     height: 40px;
     background: #fff;
-    border: none;
+    border: 2px solid rgba(183, 183, 183, 0.5);
     outline: none;
     border-radius: 40px;
     cursor: pointer;
@@ -121,13 +115,13 @@ h2{
 
 .register-link {
     font-size: .9rem;
-    color: #fff;
+    color: black;
     text-align: center;
     margin: 25px 0 10px;
 }
 
 .register-link p a{
-    color: #fff;
+    color: black;
     text-decoration: none;
     font-weight: 600;    
 }
@@ -135,16 +129,3 @@ h2{
 .register-link p a:hover{
     text-decoration: underline;
 }
-
-/* @media (max-width: 390px){
-    .login-box {
-        width: 100%;
-        height: 100vh;
-        border: none;
-        border-radius: 0;
-    } 
-
-    .input-box{
-        width: 290px;
-    }
-} */

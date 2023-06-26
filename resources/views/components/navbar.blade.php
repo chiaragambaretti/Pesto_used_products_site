@@ -1,7 +1,7 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
+<nav class="navbar navbar-dark navbar-expand-lg bg-transparent fixed-top navbar-blur">
     <div class="container-fluid">
         {{-- INSERIRE LOGO --}}
-        <a class="navbar-brand" href="{{ route('home')}}">Presto</a>
+        <a class="navbar-brand text-black" href="{{ route('home')}}">Presto</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,10 +13,10 @@
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}"><i class="fa-solid fa-house"></i> Home</a>
                 </li> --}}
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('announcement.index')}}"><i class="fa-regular fa-rectangle-list"></i>{{__('ui.navAnnunci')}}</a>
+                    <a class="nav-link text-black" aria-current="page" href="{{route('announcement.index')}}"><i class="fa-regular fa-rectangle-list"></i>{{__('ui.navAnnunci')}}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-list"></i>{{__('ui.navCategorie')}}</a>
                         <ul class="dropdown-menu">
                             @foreach ($categories as $category)
@@ -29,15 +29,15 @@
                         <a class="nav-link" href="{{ route('register')}}"><i class="fa-solid fa-user-plus"></i>{{__('ui.navRegister')}}</a>
                     </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login')}}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        <a class="nav-link text-black" href="{{ route('login')}}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('announcement.create')}}"><i class="fa-solid fa-plus"></i> Inserisci Annuncio</a>
+                        <a class="nav-link text-black" href="{{route('announcement.create')}}"><i class="fa-solid fa-plus"></i> Inserisci Annuncio</a>
                     </li>
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link btn btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
+                        <a class="nav-link text-black btn btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
                             <i class="fa-solid fa-user-secret"></i> Revisiona
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
                                 {{-- contatore articoli da accettare --}}
@@ -56,7 +56,7 @@
                 <div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lingua</a>
+                        <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lingua</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <x-_locale lang='it'/>
