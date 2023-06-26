@@ -28,7 +28,7 @@
 <div class="container-fluid mt-5 text-center">
   <div class="row">
     <div class="col-12">
-      <h1 class="display-2 fw-bold header-h1">Presto Ecommerce</h1>
+      <h1 class="display-3 fw-bold header-h1">Presto Ecommerce</h1>
       <p class="header-p">
         "Scopri il piacere dello shopping sostenibile nel nostro ecommerce di prodotti usati. Risparmia denaro, riduci gli sprechi. Dai valore ai tuoi soldi, trova tesori nascosti a prezzi incredibili"
       </p>
