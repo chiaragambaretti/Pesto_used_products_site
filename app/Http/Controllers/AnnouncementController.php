@@ -6,6 +6,7 @@ use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AnnouncementController;
 
+
 class AnnouncementController extends Controller
 {
     public function showAnnouncement(Announcement $announcement){
