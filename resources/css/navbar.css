@@ -1,3 +1,8 @@
 .navbar-blur{
     backdrop-filter: blur(100px);
 }
+
+.hrefCustom{
+    text-decoration-line: none;
+    color: rgba(0, 0, 0, 0.721);
+}

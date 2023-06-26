@@ -55,15 +55,15 @@
                             <li class="nav-item">
                                 <x-_locale lang='it'/>
                                 
-                                <a href="">Italiano</a>
+                                <a class="hrefCustom" href="">Italiano</a>
                             </li>
                             <li class="nav-item">
                                 <x-_locale lang='en'/>
-                                <a href="">Inglese</a>
+                                <a class="hrefCustom" href="">Inglese</a>
                             </li>
                             <li class="nav-item">
                                 <x-_locale lang='es'/>
-                                <a href="">Spagnolo</a>
+                                <a class="hrefCustom" href="">Spagnolo</a>
                             </li>
                         </ul>
                     </li>
