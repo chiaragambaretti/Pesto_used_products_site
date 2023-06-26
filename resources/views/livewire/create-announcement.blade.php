@@ -8,7 +8,7 @@
   <form wire:submit.prevent="store">
     @csrf
     <div class="mb-3">
-      <label for="InputTitle" class="form-label">Inserisci titolo</label>
+      <label for="InputTitle" class="form-label">{{__('ui.titolo')}}</label>
       <input type="text" name="title" wire:model="title" class="form-control @error('title') is-invalid @enderror" id="InputTitle" aria-describedby="emailHelp">
       {{-- errore nell'inserimento dei campi --}}
       @error('title')
@@ -18,7 +18,7 @@
 
     <div>
     <select class="mb-3 form-select @error('category') is-invalid @enderror" id="category" aria-label="Default select example" wire:model.defer='category'>
-      <option selected>Scegli Categoria</option>
+      <option selected>{{__('ui.selectCategoria')}}</option>
       @foreach($categories as $category)
       <option value="{{$category->id}}">{{$category->name}}</option> 
       @endforeach 
@@ -29,7 +29,7 @@
     </div>
 
     <div class="mb-3">
-      <label  for="floating">Inserisci descrizione</label>
+      <label class="mb-2" for="floating">{{__('ui.descrizione')}}</label>
       <textarea class="form-control @error('body') is-invalid @enderror" name="body" wire:model="body" id="floating" style="height: 100px"></textarea>
       {{-- errore nell'inserimento dei campi --}}
       @error('body')
@@ -38,7 +38,7 @@
     </div>
     
     <div class="mb-3">
-      <label for="InputPrice" class="form-label">Inserisci prezzo</label>
+      <label for="InputPrice" class="form-label">{{__('ui.inserisciPrezzo')}}</label>
       <input type="number" step="any" name="price" wire:model="price" class="form-control @error('price') is-invalid @enderror" id="InputPrice">
       {{-- errore nell'inserimento dei campi --}}
       @error('price')
@@ -56,22 +56,19 @@
     @if (!empty($images))
     <div class="row">
       <div class="col-12">
-        <p>Photo preview:</p>
+        <p>{{__('ui.preview')}}</p>
         <div class="row border border-4 border-danger rounded shadow py-4">
           @foreach ($images as $key => $image )
           <div class="col my-3">
             <div class="mx-auto-shadow-rounded img-previewSize"  style="background-image: url({{$image->temporaryUrl()}}); background-repeat: no-repeat; background-position: center; background-size: cover;"></div>
-            <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+            <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.cancella')}}</button>
           </div>
           @endforeach
         </div>
       </div>
     </div>
     @endif
-    {{-- <button type="submit" class="btn btn-success shadow px-4 py-2 my-4">Crea</button>  --}}
-    
-   
-    
-    <button type="submit" class="btn btn-success">Inserisci annuncio</button>
+
+    <button type="submit" class="btn btn-success">{{__('ui.btnInserisci')}}</button>
   </form>    
 </div>

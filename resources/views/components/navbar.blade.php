@@ -2,16 +2,13 @@
     <div class="container-fluid">
         {{-- INSERIRE LOGO --}}
         <a class="navbar-brand text-black" href="{{ route('home')}}">Presto</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                {{-- <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}"><i class="fa-solid fa-house"></i> Home</a>
-                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link text-black" aria-current="page" href="{{route('announcement.index')}}"><i class="fa-regular fa-rectangle-list"></i>{{__('ui.navAnnunci')}}</a>
                 </li>
@@ -25,20 +22,17 @@
                         </ul>
                     </li>
                     @guest
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register')}}"><i class="fa-solid fa-user-plus"></i>{{__('ui.navRegister')}}</a>
-                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{ route('login')}}"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="{{route('announcement.create')}}"><i class="fa-solid fa-plus"></i> Inserisci Annuncio</a>
+                        <a class="nav-link text-black" href="{{route('announcement.create')}}"><i class="fa-solid fa-plus"></i>{{__('ui.InserireAnnuncio')}}</a>
                     </li>
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="nav-link text-black btn btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
-                            <i class="fa-solid fa-user-secret"></i> Revisiona
+                            <i class="fa-solid fa-user-secret"></i> {{__('ui.revisiona')}}
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
                                 {{-- contatore articoli da accettare --}}
                                 {{App\Models\Announcement::toBeRevisionedCount()}}
@@ -56,19 +50,20 @@
                 <div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lingua</a>
+                        <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.lingua')}}</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <x-_locale lang='it'/>
-                                Italiano
+                                
+                                <a href="">Italiano</a>
                             </li>
                             <li class="nav-item">
                                 <x-_locale lang='en'/>
-                                Inglese
+                                <a href="">Inglese</a>
                             </li>
                             <li class="nav-item">
                                 <x-_locale lang='es'/>
-                                Spagnolo
+                                <a href="">Spagnolo</a>
                             </li>
                         </ul>
                     </li>
