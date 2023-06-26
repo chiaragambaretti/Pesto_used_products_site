@@ -46,18 +46,23 @@
                     <h2>{{__('ui.navRegister')}}</h2>
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-r-square"></i></span>
-                        <input type="email" required>
-                        <label for="exampleInputEmail1">Email</label>
+                        <input id="InputName" type="text" name="name" required>
+                        <label for="InputName">Nome</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bi bi-r-square"></i></span>
+                        <input id="InputEmail1" type="email" name="email" required>
+                        <label for="InputEmail1">Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-envelope"></i></span>
-                        <input name="password" id="exampleInputPassword1" required>
-                        <label  for="exampleInputPassword1">Password</label>
+                        <input id="InputPassword1" type="password" name="password" required>
+                        <label for="InputPassword1">Password</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><i class="bi bi-envelope"></i></span>
-                        <input id="exampleInputPassword2" type="Password-confirmation" required>
-                        <label for="exampleInputPassword2">Password Confirmation</label>
+                        <input id="InputPassword2" type="password" name="password_confirmation" required>
+                        <label for="InputPassword2">Password Confirmation</label>
                     </div>
                     <div class="remember-forgot">
                         <label><input type="checkbox">Ricordami</label>
