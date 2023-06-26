@@ -44,7 +44,6 @@
                         </div>
                         <div class="remember-forgot">
                             <label><input type="checkbox">Ricordami</label>
-                            <a href="#">Ricordi la password</a>
                         </div>
                         <button class="buttonLogin" type="submit">Login</button>
                         <div class="register-link">
