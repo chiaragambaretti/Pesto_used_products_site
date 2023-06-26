@@ -7,7 +7,7 @@
               <div class="row">
                 <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                   <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                    <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/1200'}}"
+                    <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/800'}}"
                       class="w-100 roundedCustom" />
                     <a href="#!">
                       <div class="hover-overlay">

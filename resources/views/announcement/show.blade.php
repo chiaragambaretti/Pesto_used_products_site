@@ -7,7 +7,7 @@
           <div class="carousel-inner">
             @foreach ($announcement->images as $image)
             <div class="carousel-item @if($loop->first)active @endif">
-              <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="{{$announcement->title}}">
+              <img src="{{$announcement->images()->first()->getUrl(800 , 700)}}" class="img-fluid p-3 rounded" alt="{{$announcement->title}}">
             </div>
             @endforeach
           </div>

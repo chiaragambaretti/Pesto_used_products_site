@@ -25,7 +25,7 @@ class FrontController extends Controller
     }
 
     public function workWithUs(){
-        return view('workWithUs');
+        return view('workwithus');
     }
 
     public function setLanguage($lang){

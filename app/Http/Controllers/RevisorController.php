@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\RevisorController;
 
 //controllor che si occuperà della gestione del revisore
 class RevisorController extends Controller
