@@ -41,12 +41,14 @@
           </button>
         </div>
       </div>
-      <div class="col-12 col-md-6">
-        <a href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
-        <p>{{$announcement->user->name ?? ''}}</p>     
-        <p>{{$announcement->created_at->format('d/m/Y')}}</p>
-        <h1>{{$announcement->title}}</h1>
-        <p>Prezzo: € {{$announcement->price}}</p>
+
+      <div class="col-12 col-md-6 mt-3">
+        <a class="btn btn-success mb-3" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
+        <h2>{{$announcement->title}}</h2>
+        <p><span class="h4">Inserito da: </span> {{$announcement->user->name ?? ''}}</p>     
+        <p><span class="h4">Pubblicato il: </span>{{$announcement->created_at->format('d/m/Y')}}</p>
+
+        <p><span class="h4">Prezzo: </span><span class="h3">€{{$announcement->price}}</span></p>
       </div>
     </div>
     <div class="row my-3">

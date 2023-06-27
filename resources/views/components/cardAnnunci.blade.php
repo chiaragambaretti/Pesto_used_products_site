@@ -51,7 +51,7 @@
       </div>
 </section> --}}
 <section>
-  <div class="container mb-3 py-1 width-annunci bg-trasparent">
+  <div class="container mb-3 py-1 width-annunci">
     <div class="row justify-content-center mb-3">
         <div class="card roundedCustom">
           <div class="card-body blurAnnunci">
@@ -61,7 +61,7 @@
                     class="w-100 roundedCustom" />
               </div>
               <div class="col-md-6 col-lg-6 col-xl-6">
-                <h5>{{$announcement->title}}</h5>
+                <h4 class="font-weight-annunci">{{$announcement->title}}</h4>
                 <div class="mt-1 mb-0 text-muted small">
                   
                 </div>
@@ -80,7 +80,7 @@
                 
                 <div class="d-flex flex-column mt-4">
                 
-                  <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btn-sm btn-index" type="button">Dettagli</a>
+                  <a href="{{route('announcement.show', compact('announcement'))}}" class="btn" type="button">Dettagli<span class="ps-2"><i class="fa-solid fa-book-open fa-lg" style="color: #ff0003"></i></span> </a>
                 </div>
               </div>
             </div>
