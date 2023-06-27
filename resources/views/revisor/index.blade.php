@@ -8,9 +8,10 @@
         </div>
     </div>
     @if ($announcement_to_check)
+    {{-- AGGIUSTARE LA VISTA CON I DFLEX E I JUSTIFY --}}
     <div class="container my-5">
         <div class="row ">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-3">
                 <div id="carouselExampleCaptions" class="carousel slide">
                     @if (count($announcement_to_check->images))
                     <div class="carousel-inner">
@@ -20,26 +21,11 @@
                         </div>
                         @endforeach
                     </div>
-                    @else            
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/1200/600" class="img-fluid rounded" alt="{{$announcement_to_check->title}}"> 
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/601" class="img-fluid rounded" alt="{{$announcement_to_check->title}}">
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/603" class="img-fluid rounded" alt="{{$announcement_to_check->title}}">
-                        </div>  
-                    </div>
-                    @endif    
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -48,15 +34,43 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                    @else            
+                    <div>
+                        <h2>Immagine di default:</h2>
+                        <img src="https://liftlearning.com/wp-content/uploads/2020/09/default-image.png" alt="immagine di default">
+                    </div>
+                    @endif
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-3">
                 <a href="{{route('categoryShow', ['category'=>$announcement_to_check->category])}}">{{$announcement_to_check->category->name}}</a>
                 <p>{{$announcement_to_check->user->name ?? ''}}</p>     
                 <p>{{$announcement_to_check->created_at}}</p>
                 <h1>{{$announcement_to_check->title}}</h1>
                 <p>Prezzo: € {{$announcement_to_check->price}}</p>
             </div>
+            @if (count($announcement_to_check->images))
+            <div class="col-md-3">
+                <div class="card-body">
+                    <h5 class="tc-accent">Revisione Immagini</h5>
+                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                </div>
+            </div>
+            <div class="col-md-3 border-end">
+                <h5 class="tc-accent mt-3">Tags</h5>
+                <div class="p-2">
+                    @if ($image->labels)
+                        @foreach ($image->labels as $label)
+                            <p class="d-inline">{{$label}},</p>
+                        @endforeach
+                    @endif    
+                </div>
+            </div>
+            @endif
         </div>
         <div class="row my-3">
             <div class="col-12 col-md-6">
