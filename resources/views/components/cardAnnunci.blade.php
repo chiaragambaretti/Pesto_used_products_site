@@ -51,7 +51,7 @@
       </div>
 </section> --}}
 <section>
-  <div class="container mb-3 py-1">
+  <div class="container mb-3 py-1 width-annunci">
     <div class="row justify-content-center mb-3">
         <div class="card roundedCustom">
           <div class="card-body">
