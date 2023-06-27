@@ -51,10 +51,10 @@
       </div>
 </section> --}}
 <section>
-  <div class="container mb-3 py-1 width-annunci">
+  <div class="container mb-3 py-1 width-annunci bg-trasparent">
     <div class="row justify-content-center mb-3">
         <div class="card roundedCustom">
-          <div class="card-body">
+          <div class="card-body blurAnnunci">
             <div class="row">
               <div class="col-12 col-md-3 rounded">
                   <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/1200'}}"

@@ -1,0 +1,21 @@
+.header-become{
+    background: url(./img/lavora-con-noi.jpg);
+    height: 70vh;
+    background-size: cover;
+}
+
+.btn-makerevisor{
+    background-color: rgb(204, 2, 2);
+    color: white;
+    width: 300px;
+    height: 50px;
+}
+
+.btn-makerevisor:hover{
+    background-color: rgba(168, 0, 0, 0.993);
+    color: white;
+}
+
+footer{
+    min-height: 80vh;
+}
