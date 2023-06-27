@@ -57,7 +57,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-12 col-md-3 rounded">
-                  <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : 'https://picsum.photos/1200'}}"
+                  <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/1200'}}"
                     class="w-100 roundedCustom" />
               </div>
               <div class="col-md-6 col-lg-6 col-xl-6">

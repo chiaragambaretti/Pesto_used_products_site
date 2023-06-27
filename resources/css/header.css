@@ -1,50 +1,33 @@
 body {
+    font-family: 'Lato', sans-serif;
     margin:0;
     padding: 0;
   }
   
-  /* h1 {
-    font-family: 'Lato', sans-serif;
+.header-h1 {
+    
     font-weight:300;
     letter-spacing: 2px;
-    font-size:48px;
+    font-size: 4rem;
+
   }
-  p {
-    font-family: 'Lato', sans-serif;
+.header-p{
+    
     letter-spacing: 1px;
-    font-size:14px;
+    font-size: 20px;
     color: #333333;
   }
 
-  .textCustom{
-    margin-top: 20vh;
-  } */
-  
-  .headerBox {
-    height: 80vh;
-    /* background:linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.40)),
-    url('./img/header.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+.textCustom{
+    margin-top: 23vh;
   }
   
-.header-image{
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-}
-
-.header-text{
-  margin-bottom: 20vh;
-}
-
-.header-h1{
-  letter-spacing: 2px;
-}
-
-.header-p{
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
+.headerBox {
+    height: 100vh;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.40)),
+    url('./img/libri.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  

@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="display-6 fw-bold media-visit">Visita gli ultimi annunci</h2>
+        <h2 class="display-6 text-center fw-bold media-visit">Visita gli ultimi annunci</h2>
         <div class="row justify-content-center">
             @foreach ($categories as $category)
             <div class="col-12 col-md-1">

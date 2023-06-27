@@ -1,4 +1,6 @@
 .div-custom{
+    display: flex;
+    justify-content: center;
     height: 5vh;
     background: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(248, 134, 3));
 }
