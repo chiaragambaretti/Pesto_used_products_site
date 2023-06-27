@@ -6,24 +6,23 @@ body {
   
 .header-h1 {
     
-    font-weight:300;
+    font-weight:600;
     letter-spacing: 2px;
-    font-size: 4rem;
+    font-size: 5rem;
 
   }
 .header-p{
-    
-    letter-spacing: 1px;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 25px;
     color: #333333;
   }
 
 .textCustom{
-    margin-top: 23vh;
+    margin-top: 20vh;
   }
   
 .headerBox {
-    height: 100vh;
+    height: 80vh;
     background:linear-gradient(to bottom, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.40)),
     url('./img/libri.jpg');
     background-position: center;

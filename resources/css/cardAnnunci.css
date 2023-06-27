@@ -10,5 +10,9 @@ body{
 }
 
 .btn-index{
-    background-color: lightskyblue;
+    background-color: lightgray;
+}
+
+.width-annunci{
+    width: 65%;
 }
