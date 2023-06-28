@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     height: 5vh;
-    background: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(248, 134, 3));
+    background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.552), rgba(248, 134, 3, 0.559));
 }
 
 .btn-revisor{

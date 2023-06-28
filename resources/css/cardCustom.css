@@ -70,8 +70,8 @@ body
 
 .property-description
 {
-  color: rgb(0, 0, 0);
-  background-color: #ffffff66;
+  background-color: #333333c0;
+  color: #d6cfcf;
   height:8em;
   width:100%;
   position:absolute;

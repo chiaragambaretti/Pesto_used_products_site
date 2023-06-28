@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Presto.it</title>
     {{-- link css --}}
-    <link rel="stylesheet" href="{{asset('css/becomerevisor.css')}}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 <body>
 

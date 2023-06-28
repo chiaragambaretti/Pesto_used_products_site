@@ -9,8 +9,8 @@
                 </div>
                 <div class="property-description">
                     <h5 class="text-truncate home-card-h5">{{$announcement->title}}</h5>
-                    <p class="card-text home-card-p">Prezzo: €{{$announcement->price}}</p>
-                    <p class="card-text home-card-p">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
+                    <p class="home-card-p">Prezzo: €{{$announcement->price}}</p>
+                    <p class="home-card-p">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                 </div>
             </a>
         </div>

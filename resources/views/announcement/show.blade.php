@@ -1,7 +1,7 @@
 <x-layout>
   <div class="container my-5">
     <div class="row ">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 bg-danger">
         <div id="carouselExampleCaptions" class="carousel slide">
           @if (count($announcement->images))
           <div class="carousel-inner">
@@ -43,7 +43,7 @@
       </div>
 
       <div class="col-12 col-md-6 mt-3">
-        <a class="btn btn-success mb-3" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
+        <a class="btn mb-3 btnShow btn-sm" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
         <h2>{{$announcement->title}}</h2>
         <p><span class="h4">Inserito da: </span> {{$announcement->user->name ?? ''}}</p>     
         <p><span class="h4">Pubblicato il: </span>{{$announcement->created_at->format('d/m/Y')}}</p>
@@ -51,11 +51,14 @@
         <p><span class="h4">Prezzo: </span><span class="h3">€{{$announcement->price}}</span></p>
       </div>
     </div>
-    <div class="row my-3">
-      <div class="col-12 col-md-6">
-        <h3>Descrizione</h3>
-        <p>{{$announcement->body}}</p>
+  
+      <div class="row my-3">
+        <div class="col-12 col-md-6">
+          <h3>Descrizione</h3>
+          <p>{{$announcement->body}}</p>
+        </div>
       </div>
-    </div>
+
+    
   </div>
 </x-layout>

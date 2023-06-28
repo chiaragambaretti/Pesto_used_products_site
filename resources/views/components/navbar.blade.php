@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-transparent fixed-top navbar-blur">
+<nav class="navbar navbar-expand-lg bg-trasparent navbarBlur fixed-top navbar-custom">
     <div class="container-fluid">
         {{-- INSERIRE LOGO --}}
         <a class="navbar-brand text-black" href="{{ route('home')}}">Presto</a>

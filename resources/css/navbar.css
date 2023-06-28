@@ -1,7 +1,14 @@
-.navbar-blur{
-    backdrop-filter: blur(100px);
+/* .navbar-custom{
+   background-color: #fa8649;
+   background: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(248, 134, 3));
+   
+} */
+.navbarBlur{
+    
+    backdrop-filter: blur(5px) saturate(1);
+    background: linear-gradient(to bottom, #b27150, #f2eae89e);
+    /* background-color: #b27150; */
 }
-
 .hrefCustom{
     text-decoration-line: none;
     color: rgba(0, 0, 0, 0.721);

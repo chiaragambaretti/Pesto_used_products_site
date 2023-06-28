@@ -1,6 +1,6 @@
-<footer class="container-fluid bg-dark ">
+<footer class="container-fluid footer-wrapper bg-dark">
     <div class="row justify-content-around">    
-        <div col-12 col-sm-6>
+        <div col-12 col-md-6 col-sm-6>
             <ul class="social-icons">   
                 <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff"></i></a></li>
                 <li><a href="https://it-it.facebook.com/"><i class="fa-brands fa-facebook fa-xl" style="color: #ffffff"></i></a></li>

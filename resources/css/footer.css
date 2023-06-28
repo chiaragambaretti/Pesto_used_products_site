@@ -1,16 +1,14 @@
 footer{
     width: 100%;
-    min-height: 100px;
+    min-height: 100%!important;
     position: relative;
     display: flex;
     justify-content: center; 
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
-footer .social-icons,
-footer .menu
-
-{
+.footer-wrapper .social-icons,
+.footer-wrapper .menu{
     position: relative;
     display: flex;
     justify-content: center;
@@ -19,26 +17,25 @@ footer .menu
       
 }
 
-footer .social-icons li,
-footer .menu li
-{
+.footer-wrapper .social-icons li,
+.footer-wrapper .menu li{
     margin-top: 20px;
     margin-right: 20px;
     text-align: center;
     
 }
 
-footer .social-icons li:hover{
+.footer-wrapper .social-icons li:hover{
     transform: translateY(-10px);
     
 }
 
-footer .menu li a{
+.footer-wrapper .menu li a{
     color: white;
     opacity: 0.70;
 }
 
-footer .menu li a:hover{
+.footer-wrapper .menu li a:hover{
     opacity: 1;
 }
 
