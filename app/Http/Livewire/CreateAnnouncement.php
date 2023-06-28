@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\AddWatermark;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
@@ -85,8 +86,12 @@ class CreateAnnouncement extends Component
                     
                     new ResizeImage($newImage->path , 800, 700),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
+                    new GoogleVisionLabelImage($newImage->id),
+                    new AddWatermark($newImage->id)
                 ])->dispatch($newImage->id);
+
+                    // AddWatermark:: 
+
             }
             
             File::deleteDirectory(storage_path('/app/livewire-tmp'));

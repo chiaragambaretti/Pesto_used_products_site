@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <h1 class="text-center my-4">{{$category->name}}</h1>
-            @forelse ($category->announcements as $announcement)
+            
+            @forelse ($category->announcements->where('is_accepted' , true) as $announcement)
 
             <x-cardAnnunci :announcement="$announcement"></x-cardAnnunci>
             
