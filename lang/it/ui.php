@@ -1,29 +1,31 @@
 <?php
 return [
-     // NAVBAR
-    
+    // NAVBAR
     'navAnnunci'=> ' Annunci',
     'revisiona' => ' Revisiona',
     'InserireAnnuncio'=> ' Inserisci annuncio',
     'navCategorie'=> ' Categorie',
-    
     'lingua'=> 'Lingua',
     'navPlaceholder'=> ' Cerca',
     // FINE NAVBAR
-
+    
     // HEADER
     'header' => 'Scopri il piacere dello shopping sostenibile nel nostro ecommerce di prodotti usati.',
     'header2' => 'Risparmia denaro, riduci gli sprechi.', 
     'header3' => 'Dai valore ai tuoi soldi, trova tesori nascosti a prezzi incredibili',
     'buttonHeader'=> 'Vai allo shop',
+    'welcome'=> 'Visualizza gli ultimi annunci',
     // FINE HEADER
-
+    
     'allAnnouncements' => 'Tutti gli annunci',
 
+    'category' => 'Non sono presenti annunci per questa categoria!',
+
+    
     'footerLavora' => ' Lavora con noi',
-
+    
     'noncisonoAnnunci'=> 'Non ci sono annunci per questa categoria',
-
+    
     // INSERISCI ANNUNCIO
     'titolo' => 'Inserisci un titolo',
     'selectCategoria' => 'Scegli una categoria',
@@ -33,7 +35,21 @@ return [
     'cancella'=> 'Cancella',
     'btnInserisci'=> 'Invia annuncio',
     // FINE INSERISCI ANNUNCIO
-
+    
+    // REVISIONA ANNUNCIO
+    'revisionaCisono'=>'Ecco i tuoi annunci da revisionare',
+    'revisionaNoncisono'=>'Non ci sono annunci da revisionare',
+    'revisionaRifiuta'=>'Rifiuta',
+    'revisionaAccetta'=>'Accetta',
+    'revisionaAdulti'=>'Adulti',
+    'revisionaSatira'=>'Satira',
+    'revisionaMedicina'=>'Medicina',
+    'revisionaViolenza'=>'Violenza',
+    'revisionaAmmicca'=>'Contenuto Ammiccante',
+    'revisionaImg'=>'Revisione immagini',
+    'revisionaDesc'=>'Descrizione',
+    // FINE REVISIONA ANNUNCIO
+    
     // LAVORA CON NOI
     'workLavoraCon' => ' Benvenuto nella sezione "Lavora con noi!"',
     'workSiamo' => ' Siamo entusiasti che tu stia considerando di unirti al nostro team!',
@@ -45,13 +61,13 @@ return [
     'workDiventa' => ' Diventa Revisore',
     'inviaRichiesta'=> 'Invia la tua richiesta',
     // FINE LAVORA CON NOI
-
+    
     // LOGIN
     'loginNonsei'=> 'Non sei ancora registrato?',
     'loginRicorda'=> 'Ricordami',
     'loginRegister'=> ' Registrati',
     // FINE LOGIN
-
+    
     // REGISTER
     'registerAccedi'=> 'Accedi',
     'registerHai'=>'Hai già un Account?',

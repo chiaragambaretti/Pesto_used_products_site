@@ -16,9 +16,9 @@
                             <input id="exampleInputPassword1" type="Password" name="password" required>
                             <label for="exampleInputPassword1">Password</label>
                         </div>
-                        <div class="remember-forgot">
+                        {{-- <div class="remember-forgot">
                             <label><input type="checkbox">{{__('ui.loginRicorda')}}</label>
-                        </div>
+                        </div> --}}
                         <button class="buttonLogin" type="submit">Login</button>
                         <div class="login-link">
                             <p class="text-black">{{__('ui.loginNonsei')}} <a class="text-black" href="{{route('register')}}">{{__('ui.loginRegister')}}</a></p>
