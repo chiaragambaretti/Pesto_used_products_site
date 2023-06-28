@@ -59,3 +59,13 @@ header{
     opacity: 0;
     transition: all 0.6s linear;
   }
+
+  @media screen and (max-width: 390px){
+    .headerBox{
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.23), rgba(0, 0, 0, 0.40)), url(./img/call2.jpg);
+    }
+    .header-p{
+      color: rgba(245, 245, 245, 0.849);
+    }
+
+  }

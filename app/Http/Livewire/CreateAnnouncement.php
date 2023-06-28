@@ -56,13 +56,15 @@ class CreateAnnouncement extends Component
         'temporary_images.*.image' => 'Tutti i file devono essere immagini',
         'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 5mb',
         'images.image' => 'Il file dev\'essere un\'immagine',
-        'images.max' => 'L\'immagine dev\'essere massimo di 5mb'
+        'images.max' => 'L\'immagine dev\'essere massimo di 5mb',
+        'price.max' => 'Il prezzo non deve superare il numero 999999.99'
     ];
     //modifica valore rules
     protected $validationAttributes = [
         'title' => 'titolo',
         'body'=>'descrizione',
-        'price'=>'prezzo'
+        'price'=>'prezzo',
+        'category'=> 'categoria'
     ];
 
     public function updatedTemporaryImages(){
