@@ -1,5 +1,5 @@
 <x-layout>  
-    <div class="container sectionLogin">
+    <div class="container-fluid sectionLogin">
         <div class="row">
             <div class="col-12">
                 <div class="login-box">

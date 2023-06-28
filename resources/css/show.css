@@ -5,6 +5,15 @@
 
 }
 
-.page-link{
-    background-color: rgb(255, 255, 255);
+.border-show{
+    border: 2px solid #db9320;
+    border-radius: 20px;
+}
+
+.btn-color-show{
+    background-color: lightgray;
+}
+
+.btn-color-show:hover{
+    background-color: #db9320;
 }

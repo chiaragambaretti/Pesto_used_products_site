@@ -6,8 +6,8 @@
           <div class="card-body blurAnnunci">
             <div class="row">
               <div class="col-12 col-md-3 rounded">
-                  <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/1200'}}"
-                    class="w-100 roundedCustom" />
+                  <a href="{{route('announcement.show', compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/1200'}}"
+                    class="w-100 roundedCustom" /></a>
               </div>
               <div class="col-md-6 col-lg-6 col-xl-6 mt-2">
                 <h4 class="font-weight-annunci">{{$announcement->title}}</h4>

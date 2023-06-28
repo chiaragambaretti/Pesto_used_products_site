@@ -1,13 +1,13 @@
 <x-layout>
-  <div class="container my-5">
+  <div class="container margin15vh">
     <div class="row ">
-      <div class="col-12 col-md-6 bg-danger">
+      <div class="col-12 col-md-6">
         <div id="carouselExampleCaptions" class="carousel slide">
           @if (count($announcement->images))
           <div class="carousel-inner">
             @foreach ($announcement->images as $image)
             <div class="carousel-item @if($loop->first)active @endif">
-              <img src="{{$image->getUrl(800 , 700)}}" class="img-fluid p-3 rounded" alt="{{$announcement->title}}">
+              <img src="{{$image->getUrl(800 , 700)}}" class="img-fluid p-3 rounded border-show" alt="{{$announcement->title}}">
             </div>
             @endforeach
           </div>
@@ -43,7 +43,7 @@
       </div>
 
       <div class="col-12 col-md-6 mt-3">
-        <a class="btn mb-3 btnShow btn-sm" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
+  <a class="btn mb-3 btnShow btn-sm btn-color-show" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
         <h2>{{$announcement->title}}</h2>
         <p><span class="h4">Inserito da: </span> {{$announcement->user->name ?? ''}}</p>     
         <p><span class="h4">Pubblicato il: </span>{{$announcement->created_at->format('d/m/Y')}}</p>

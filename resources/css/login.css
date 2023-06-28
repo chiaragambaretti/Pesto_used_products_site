@@ -15,14 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* animation: animateBg 5s linear infinite; */
 }
-
-/* @keyframes animateBg{
-    100%{
-        filter: hue-rotate(360deg);
-    }
-} */
 
 .login-box{
     position: relative;

@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-12">
                 @if (session()->has('message'))
-                <div class="alert alert-success mt-5">
+                <div class="alert alert-success margin15vh">
                     {{ session('message') }}
                 </div>
                 @endif
