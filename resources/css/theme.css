@@ -9,3 +9,12 @@ body {
 main {
     min-height: 100vh;
 }
+
+.logoCustom{
+    width: 80px;
+    height:50px;
+}
+
+.margin15vh{
+    margin-top: 15vh;
+}

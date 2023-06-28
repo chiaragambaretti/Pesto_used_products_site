@@ -1,3 +1,4 @@
+
 <section>
   <div class="container mb-2 py-1 width-annunci ">
     <div class="row justify-content-center mb-3">
@@ -8,9 +9,8 @@
                   <img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/1200'}}"
                     class="w-100 roundedCustom" />
               </div>
-              
-              <div class="col-12 col-md-6 mt-3 centerCustom">
-                <h4 class="font-weight-annunci ">{{$announcement->title}}</h4>
+              <div class="col-md-6 col-lg-6 col-xl-6 mt-2">
+                <h4 class="font-weight-annunci">{{$announcement->title}}</h4>
                 <div class="mt-1 mb-0 text-muted small">
                   
                 </div>
@@ -25,15 +25,13 @@
 
               <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                 <div class="d-flex flex-row align-items-center mb-1">
-                  <h4 class="mb-1 ms-5 me-1">€{{$announcement->price}}</h4>
+                  <h4 class="mb-1 ms-5  ">€{{$announcement->price}}</h4>
                 </div>
                 
                 <div class="d-flex flex-column mt-4">
-
-                  {{-- rivedere pulsante dettagli --}}
-                  <a class="btn my-2 ms-4 btnShow btnShow2 text-center btn-sm" href="{{route('announcement.show', compact('announcement'))}}">Dettagli<span class="ps-2"><i class="fa-solid fa-book-open fa-lg" style="color: #db9320"></i></span></a></a>
-
-                  <a href="{{route('categoryShow', ['category'=>$announcement->category])}}" class="btn" type="button">{{$announcement->category->name}}</a>
+                
+                  <a href="{{route('announcement.show', compact('announcement'))}}" class="btn btnDetailIndex">Dettagli<span class="text-center ps-2"><i class="fa-solid fa-book-open fa-lg" style="color: #db9320"></i></span> </a>
+                  <a class="btn mt-4 btnTuttiannunciCustom " href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}} <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
             </div>

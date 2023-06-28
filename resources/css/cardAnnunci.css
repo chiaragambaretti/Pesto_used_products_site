@@ -22,9 +22,20 @@ body{
     width: 65%;
 } 
 
-@media screen and(max-width:500px){
-    .centerCustom{
-        padding-left: -40px !important;
-       
-    }
+.btnTuttiannunciCustom{
+    text-decoration: none;
+    border: none;
 }
+
+.btnTuttiannunciCustom:hover{
+    background-color: #db9320;
+    
+}
+
+.btnDetailIndex{
+    border: none;
+}
+.btnDetailIndex:hover{
+    background-color: #db9320;
+}
+

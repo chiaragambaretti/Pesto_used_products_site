@@ -29,12 +29,13 @@
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('announcement.create')}}"><i class="fa-solid fa-plus"></i>{{__('ui.InserireAnnuncio')}}</a>
                     </li>
+                    
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item">
-
+                        
                         <a class="nav-link text-black btn btn-sm position-relative left-counter" aria-current="page" href="{{route('revisor.index')}}">
                             <i class="fa-solid fa-user-secret"></i> {{__('ui.revisiona')}}
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success counter-left ">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark counter-left ">
                                 {{-- contatore articoli da accettare --}}
                                 {{App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class="visually-hidden">unread messages</span>
@@ -46,30 +47,30 @@
                         @csrf
                         <button class="btn"><i class="fa-solid fa-right-to-bracket"></i> Logout</button>
                     </form>
+                    
+                    
                     @endguest
                 </ul>
                 <div>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item ">
-                        <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.lingua')}}</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        @auth
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold">{{Auth::user()->name}}</a>
+                        </li>
+                        @endauth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{__('ui.lingua')}}
+                        </a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <x-_locale lang='it'/>
-                                
-                                <a class="hrefCustom" href="">Italiano</a>
-                            </li>
-                            <li class="nav-item">
-                                <x-_locale lang='en'/>
-                                <a class="hrefCustom" href="">Inglese</a>
-                            </li>
-                            <li class="nav-item">
-                                <x-_locale lang='es'/>
-                                <a class="hrefCustom" href="">Spagnolo</a>
-                            </li>
+                          <li><a class="navLeng"  href="#"><x-_locale lang='it'/>Italiano</a></li>
+                          <li><a class="navLeng" href="#"><x-_locale lang='en'/>Inglese</a></li>
+                          <li><a class="navLeng" href="#"><x-_locale lang='es'/>Spagnolo</a></li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
+                      </li>
+                    </ul>
+                   
+                </div>
                 
                 <form action="{{route('announcements.search')}}" method="GET" class="d-flex" role="search">
                     <input name="searched" class="form-control me-2" type="search" placeholder="{{__('ui.navPlaceholder')}}" aria-label="Search">
