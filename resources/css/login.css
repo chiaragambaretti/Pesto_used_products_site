@@ -113,19 +113,19 @@
     font-weight: 500;
 }
 
-.register-link {
+.login-link {
     font-size: .9rem;
     color: black;
     text-align: center;
     margin: 25px 0 10px;
 }
 
-.register-link p a{
+.login-link p a{
     color: black;
     text-decoration: none;
     font-weight: 600;    
 }
 
-.register-link p a:hover{
+.login-link p a:hover{
     text-decoration: underline;
 }

@@ -45,6 +45,19 @@ return [
     'workSe' => ' Si le apasionan los productos usados, presta atención a los detalles y desea ayudar a crear una experiencia positiva para nuestros usuarios, entonces tiene lo que se necesita, haga clic en el botón a continuación y envíenos su solicitud.',
     'workDiventa' => ' Conviértete en revisor',
     'inviaRichiesta'=> 'Envíe su solicitud',
+
+       // LOGIN
+       'loginNonsei'=> 'Todavía no estas registrado?',
+       'loginRicorda'=> 'Acuérdate de mí',
+       'loginRegister'=> 'Iniciar sesión',
+       // FINE LOGIN
+   
+       // REGISTER
+       'registerAccedi'=> 'Iniciar sesión',
+       'registerHai'=>'Ya tienes una cuenta?',
+       'registerConferma'=>'Confirmar Contraseña',
+       'registerNome'=> 'Nombre de pila',
+       // FINE REGISTER
     
 ];
 

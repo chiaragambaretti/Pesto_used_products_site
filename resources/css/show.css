@@ -1,7 +1,8 @@
 .btnShow{
     background-color: rgba(128, 128, 128, 0.451);
     border-radius: 5px;
-    
+    width: 130px;
+
 }
 
 .page-link{

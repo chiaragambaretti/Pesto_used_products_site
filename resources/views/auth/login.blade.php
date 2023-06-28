@@ -9,7 +9,7 @@
                         <div class="input-box">
                             <span class="icon"><i class="fa-solid fa-envelope"></i></span>
                             <input id="exampleInputEmail1" type="email" name="email" required>
-                            <label for="exampleInputEmail1">Email</label>
+                            <label for="exampleInputEmail">Email</label>
                         </div>
                         <div class="input-box">
                             <span class="icon"><i class="fa-solid fa-lock"></i></span>
@@ -17,11 +17,11 @@
                             <label for="exampleInputPassword1">Password</label>
                         </div>
                         <div class="remember-forgot">
-                            <label><input type="checkbox">Ricordami</label>
+                            <label><input type="checkbox">{{__('ui.loginRicorda')}}</label>
                         </div>
                         <button class="buttonLogin" type="submit">Login</button>
-                        <div class="register-link">
-                            <p class="text-black">Non hai un account? <a class="text-black" href="{{route('register')}}">{{__('ui.navRegister')}}</a></p>
+                        <div class="login-link">
+                            <p class="text-black">{{__('ui.loginNonsei')}} <a class="text-black" href="{{route('register')}}">{{__('ui.loginRegister')}}</a></p>
                         </div>
                     </form>
                 </div>

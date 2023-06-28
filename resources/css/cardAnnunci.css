@@ -14,8 +14,17 @@ body{
 
 .btn-index{
     background-color: lightgray;
+
 }
+
 
 .width-annunci{
     width: 65%;
 } 
+
+@media screen and(max-width:500px){
+    .centerCustom{
+        padding-left: -40px !important;
+       
+    }
+}

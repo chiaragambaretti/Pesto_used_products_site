@@ -6,7 +6,7 @@ return [
     'revisiona' => ' Revisiona',
     'InserireAnnuncio'=> ' Inserisci annuncio',
     'navCategorie'=> ' Categorie',
-    'navRegister'=> ' Registrati',
+    
     'lingua'=> 'Lingua',
     'navPlaceholder'=> ' Cerca',
     // FINE NAVBAR
@@ -45,6 +45,19 @@ return [
     'workDiventa' => ' Diventa Revisore',
     'inviaRichiesta'=> 'Invia la tua richiesta',
     // FINE LAVORA CON NOI
+
+    // LOGIN
+    'loginNonsei'=> 'Non sei ancora registrato?',
+    'loginRicorda'=> 'Ricordami',
+    'loginRegister'=> ' Registrati',
+    // FINE LOGIN
+
+    // REGISTER
+    'registerAccedi'=> 'Accedi',
+    'registerHai'=>'Hai già un Account?',
+    'registerConferma'=>'Conferma Password',
+    'registerNome'=> 'Nome',
+    // FINE REGISTER
 ];
 
 

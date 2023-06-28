@@ -44,6 +44,18 @@ return [
     'workDiventa' => ' Become a Reviewer',
     'inviaRichiesta'=> 'Submit your request',
     
+    // LOGIN
+    'loginNonsei'=> 'Not registered yet?',
+    'loginRicorda'=> 'Remember',
+    'loginRegister'=> ' Register',
+    // FINE LOGIN
+    
+    // REGISTER
+    'registerAccedi'=> 'Login',
+    'registerHai'=>'Do you already have an account?',
+    'registerConferma'=>'Password Confirmation',
+    'registerNome'=> 'Name',
+    // FINE REGISTER
     
 ];
 

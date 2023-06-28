@@ -17,14 +17,14 @@
     <div class="d-flex justify-content-center">
         <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl mt-5" style="color: #db9320;"></i>
     </div>
-    <div class="row justify-content-center">
+    {{-- <div class="row justify-content-center">
         @foreach ($categories as $category)
         <div class="col-12 col-md-1">
-            <a class="text-decoration-none" href="{{route('categoryShow', ['category'=>$category])}}"><x-cardCategories
-                :category="$category"></x-cardCategories></a>
-            </div>
+            <a class="text-decoration-none" href="{{route('categoryShow', ['category'=>$category])}}">
+                {{-- :category="$category"></a> --}}
+            {{-- </div>
             @endforeach
-        </div>
+        </div> --}}
     </div>
  
     <div class="container">

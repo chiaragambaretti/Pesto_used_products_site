@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row">
+        <div class="row my-5">
             <h1 class="text-center my-4">{{$category->name}}</h1>
             
             @forelse ($category->announcements->where('is_accepted' , true) as $announcement)
