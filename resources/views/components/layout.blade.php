@@ -11,22 +11,21 @@
     
     <x-navbar/>
     
-    <main>
-        <div class="container mt-5 text-center">
-            <div class="row">
-                <div class="col-12">
-                    @if (session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session('message') }}
-                    </div>
-                    @endif
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
                 </div>
+                @endif
             </div>
         </div>
+    </div>
+
         
         {{$slot}}
         
-    </main>
     
     <x-footer/>
     

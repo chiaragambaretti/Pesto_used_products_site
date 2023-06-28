@@ -34,4 +34,8 @@ class FrontController extends Controller
         session()->put('locale', $lang);
         return redirect()->back();
     }
+
+    public function teamWork(){
+        return view('teamwork');
+    }
 }

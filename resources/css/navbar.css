@@ -4,12 +4,19 @@
    
 } */
 .navbarBlur{
-    
-    backdrop-filter: blur(5px) saturate(1);
-    background: linear-gradient(to bottom, #b27150, #f2eae89e);
+    transition: 1s;
+    background-color: #b2715000;
+    /* backdrop-filter: blur(5px) saturate(1); */
+    /* background: linear-gradient(to bottom, #b27150, transparent); */
     /* background-color: #b27150; */
 }
+
 .hrefCustom{
     text-decoration-line: none;
     color: rgba(0, 0, 0, 0.721);
+}
+
+.navbar-scroll{
+    background-color: #db9320;
+    transition: 1s;
 }

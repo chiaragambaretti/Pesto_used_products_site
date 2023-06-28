@@ -15,7 +15,7 @@
         <h2 class="display-6 text-center fw-bold media-visit">Visita gli ultimi annunci</h2>
     </div>
     <div class="d-flex justify-content-center">
-        <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl mt-5" style="color: #ff0000;"></i>
+        <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl mt-5" style="color: #db9320;"></i>
     </div>
     <div class="row justify-content-center">
         @foreach ($categories as $category)

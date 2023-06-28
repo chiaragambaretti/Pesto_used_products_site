@@ -80,11 +80,12 @@
                 
                 <div class="d-flex flex-column mt-4">
                 
-                  <a href="{{route('announcement.show', compact('announcement'))}}" class="btn" type="button">Dettagli<span class="ps-2"><i class="fa-solid fa-book-open fa-lg" style="color: #ff0003"></i></span> </a>
+                  <a href="{{route('announcement.show', compact('announcement'))}}" class="btn" type="button">Dettagli<span class="ps-2"><i class="fa-solid fa-book-open fa-lg" style="color: #db9320"></i></span> </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
     </div>
+    {{-- #ff0003 --}}
 </section>

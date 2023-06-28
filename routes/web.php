@@ -60,3 +60,6 @@ Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])
 
 // lingue
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
+
+// team
+Route::get('/team', [FrontController::class, 'teamWork'])->name('team.work');

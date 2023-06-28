@@ -11,6 +11,7 @@
             <ul class="menu fw-bold">  
                 {{-- <li><a class="text-decoration-none" href="">Presto team</a></li> --}}
                 <li><a class="text-decoration-none" href="{{route('workwithus')}}">{{__('ui.footerLavora')}}</a></li>
+                <li><a href="{{route('team.work')}}">Team</a></li>
             </ul>
         </div>
     </div>
