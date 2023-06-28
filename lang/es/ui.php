@@ -16,8 +16,12 @@ return [
     'header2' => 'Ahorre dinero, reduzca los residuos.', 
     'header3' => 'Obtenga el valor de su dinero, encuentre tesoros escondidos a precios increíbles"',
     'buttonHeader'=> 'Ve a la tienda',
+    'welcome'=> 'Ver los últimos anuncios',
     // FINE HEADER
     
+    'category' => '¡No hay anuncios para esta categoría!',
+
+
     'allAnnouncements' => 'Todos los anuncios',
     
     'footerLavora' => ' Trabaja con nosotros',
@@ -34,6 +38,20 @@ return [
     'btnInserisci'=> 'Enviar anuncio',
     // FINE INSERISCI ANNUNCIO
     
+    // REVISIONA ANNUNCIO
+    'revisionaCisono'=>'Aquí están sus anuncios para su revisión',
+    'revisionaNoncisono'=>'No hay anuncios para revisar',
+    'revisionaRifiuta'=>'Rechazar',
+    'revisionaAccetta'=>'Aceptar',
+    'revisionaAdulti'=>'Adulto',
+    'revisionaSatira'=>'Parodia',
+    'revisionaMedicina'=>'Médica',
+    'revisionaViolenza'=>'Violencia',
+    'revisionaAmmicca'=>'Picante',
+    'revisionaImg'=>'Revision de imagen',
+    'revisionaDesc'=>'Descripción',
+    // FINE REVISIONA ANNUNCIO
+    
     
     // LAVORA CON NOI
     'workLavoraCon' => ' Bienvenido a "Trabaja con nosotros!"',
@@ -45,19 +63,19 @@ return [
     'workSe' => ' Si le apasionan los productos usados, presta atención a los detalles y desea ayudar a crear una experiencia positiva para nuestros usuarios, entonces tiene lo que se necesita, haga clic en el botón a continuación y envíenos su solicitud.',
     'workDiventa' => ' Conviértete en revisor',
     'inviaRichiesta'=> 'Envíe su solicitud',
-
-       // LOGIN
-       'loginNonsei'=> 'Todavía no estas registrado?',
-       'loginRicorda'=> 'Acuérdate de mí',
-       'loginRegister'=> 'Iniciar sesión',
-       // FINE LOGIN
-   
-       // REGISTER
-       'registerAccedi'=> 'Iniciar sesión',
-       'registerHai'=>'Ya tienes una cuenta?',
-       'registerConferma'=>'Confirmar Contraseña',
-       'registerNome'=> 'Nombre de pila',
-       // FINE REGISTER
+    
+    // LOGIN
+    'loginNonsei'=> 'Todavía no estas registrado?',
+    'loginRicorda'=> 'Acuérdate de mí',
+    'loginRegister'=> 'Iniciar sesión',
+    // FINE LOGIN
+    
+    // REGISTER
+    'registerAccedi'=> 'Iniciar sesión',
+    'registerHai'=>'Ya tienes una cuenta?',
+    'registerConferma'=>'Confirmar Contraseña',
+    'registerNome'=> 'Nombre de pila',
+    // FINE REGISTER
     
 ];
 

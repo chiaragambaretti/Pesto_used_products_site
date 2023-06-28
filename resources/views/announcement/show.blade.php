@@ -54,7 +54,7 @@
   
       <div class="row my-3">
         <div class="col-12 col-md-6">
-          <h3>Descrizione</h3>
+          <h3>{{__('ui.revisionaDesc')}}</h3>
           <p>{{$announcement->body}}</p>
         </div>
       </div>

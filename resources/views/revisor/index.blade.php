@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 mt-5 text-center fs-2">
                 {{-- verifica la presenza di annunci da revisionare --}}
-                {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+                {{$announcement_to_check ? __('ui.revisionaCisono') : __('ui.revisionaNoncisono')}}
             </div>
         </div>
     </div>
@@ -52,12 +52,12 @@
             @if (count($announcement_to_check->images))
             <div class="col-md-3">
                 <div class="card-body">
-                    <h5 class="tc-accent">Revisione Immagini</h5>
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                    <h5 class="tc-accent">{{__('ui.revisionaImg')}}</h5>
+                    <p>{{__('ui.revisionaAdulti')}}: <span class="{{$image->adult}}"></span></p>
+                    <p>{{__('ui.revisionaSatira')}}: <span class="{{$image->spoof}}"></span></p>
+                    <p>{{__('ui.revisionaMedicina')}}: <span class="{{$image->medical}}"></span></p>
+                    <p>{{__('ui.revisionaViolenza')}}: <span class="{{$image->violence}}"></span></p>
+                    <p>{{__('ui.revisionaAmmicca')}}: <span class="{{$image->racy}}"></span></p>
                 </div>
             </div>
             <div class="col-md-3 border-end">
@@ -74,7 +74,7 @@
         </div>
         <div class="row my-3">
             <div class="col-12 col-md-6">
-                <h3>Descrizione</h3>
+                <h3>{{__('ui.revisionaDesc')}}</h3>
                 <p>{{$announcement_to_check->body}}</p>
             </div>
         </div>
@@ -84,7 +84,7 @@
                 <form action="{{route('revisor.accept_announcement', ['announcement'=>$announcement_to_check])}}" method="post">
                     @csrf
                     @method('PATCH')
-                    <button type="submit" class="btn btn-success shadow">Accetta</button>
+                    <button type="submit" class="btn btn-success shadow">{{__('ui.revisionaAccetta')}}</</button>
                 </form>
             </div>
             {{-- collegato alla rotta rifiuta --}}
@@ -92,7 +92,7 @@
                 <form action="{{route('revisor.reject_announcement', ['announcement'=>$announcement_to_check])}}" method="post">
                     @csrf
                     @method('PATCH')
-                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                    <button type="submit" class="btn btn-danger shadow">{{__('ui.revisionaRifiuta')}}</button>
                 </form>
             </div>
         </div>

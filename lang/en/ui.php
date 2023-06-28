@@ -15,9 +15,13 @@ return [
     'header2' => 'Save money, reduce waste.', 
     'header3' => 'Get your money\'s worth, find hidden treasures at incredible prices"',
     'buttonHeader'=> 'Go to the shop',
+    'welcome'=> 'View the latest announcements',
     // FINE HEADER
     
     'allAnnouncements' => 'All announcements',
+
+    'category' => 'There are no ads for this category!',
+
     
     'footerLavora' => ' Work with us',
     
@@ -32,6 +36,20 @@ return [
     'cancella'=> 'Delete',
     'btnInserisci'=> 'Submit',
     // FINE INSERISCI ANNUNCIO
+    
+    // REVISIONA ANNUNCIO
+    'revisionaCisono'=>'Here are your ads for review',
+    'revisionaNoncisono'=>'There are no ads to review',
+    'revisionaRifiuta'=>'Decline',
+    'revisionaAccetta'=>'Accept',
+    'revisionaAdulti'=>'Adult',
+    'revisionaSatira'=>'Spoof',
+    'revisionaMedicina'=>'Medical',
+    'revisionaViolenza'=>'Violence',
+    'revisionaAmmicca'=>'Racy',
+    'revisionaImg'=>'Image review',
+    'revisionaDesc'=>'Description',
+    // FINE REVISIONA ANNUNCIO
     
     // LAVORA CON NOI
     'workLavoraCon' => ' Welcome to the "Work with us!"',
