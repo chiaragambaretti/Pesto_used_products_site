@@ -26,9 +26,9 @@
                         <input id="InputPassword2" type="password" name="password_confirmation" required>
                         <label for="InputPassword2">{{__('ui.registerConferma')}}</label>
                     </div>
-                    <div class="register-remember-password">
+                    {{-- <div class="register-remember-password">
                         <label><input type="checkbox">{{__('ui.loginRicorda')}}</label>
-                    </div>
+                    </div> --}}
                     <button class="buttonRegister" type="submit">{{__('ui.loginRegister')}}</button>
                     <div class="register-link">
                         <p class="text-black">{{__('ui.registerHai')}} <a class="text-black" href="{{route('login')}}">{{__('ui.registerAccedi')}}</a></p>
