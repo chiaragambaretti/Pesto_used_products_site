@@ -87,8 +87,8 @@ img{
     border-radius: 20px;
     /* background: linear-gradient(45deg, #FE0061,#FFEB3B); */
     /* background: linear-gradient(65deg, lightgray,#fec300); */
-    background: linear-gradient(45deg, #d4cdcf70,transparent);
-    transform: translateZ(100px);
+    /* background: linear-gradient(45deg, #d4cdcf70,transparent);
+    transform: translateZ(100px); */
     /* background-color: transparent; */
 }
 
