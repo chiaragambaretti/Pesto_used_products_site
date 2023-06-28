@@ -25,7 +25,7 @@ class CreateAnnouncement extends Component
     public $temporary_images;
     public $images = [];
     public $announcement;
-    public $image;
+    
 
 
 
@@ -65,32 +65,43 @@ class CreateAnnouncement extends Component
         'price'=>'prezzo'
     ];
 
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:5120',
+        ])) {
+            foreach ($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
     public function store(){
         $this->validate();
         
         
-        $category = Category::find($this->category);
+        // $category = Category::find($this->category);
         
-        $this->announcement = $category->announcements()->create([
-            'title'=>$this->title,
-            'body'=>$this->body,
-            'price'=>$this->price
-        ]);
+        // $this->announcement = $category->announcements()->create([
+        //     'title'=>$this->title,
+        //     'body'=>$this->body,
+        //     'price'=>$this->price
+        // ]);
+        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
         if(count($this->images)){
             foreach($this->images as $image){
                 // $this->announcement->images()->create(['path' =>$image->store('images', 'public')]);
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path' =>$image->store($newFileName, 'public')]);
 
+                
                 RemoveFaces::withChain([
                     
                     new ResizeImage($newImage->path , 800, 700),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
-                    new AddWatermark($newImage->id)
+                    
                 ])->dispatch($newImage->id);
 
-                    // AddWatermark:: 
+                dispatch(new AddWatermark($newImage->id));
 
             }
             
@@ -108,15 +119,6 @@ class CreateAnnouncement extends Component
         
     }
 
-    public function updatedTemporaryImages(){
-        if($this->validate([
-            'temporary_images.*' => 'image|max:5120',
-        ])) {
-            foreach ($this->temporary_images as $image){
-                $this->images[] = $image;
-            }
-        }
-    }
     public function removeImage($key){
         if(in_array($key, array_keys($this->images))){
             unset($this->images[$key]);
