@@ -68,6 +68,6 @@
       </div>
     </div>
     @endif
-    <button type="submit" class="btn btn-color-show">{{__('ui.btnInserisci')}}</button>
+    <button type="submit" class="btn btn-color-show mt-4">{{__('ui.btnInserisci')}}</button>
   </form>    
 </div>
