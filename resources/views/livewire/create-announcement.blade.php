@@ -69,6 +69,6 @@
     </div>
     @endif
 
-    <button type="submit" class="btn btn-success">{{__('ui.btnInserisci')}}</button>
+    <button type="submit" class="btn btnAcustom">{{__('ui.btnInserisci')}}</button>
   </form>    
 </div>
