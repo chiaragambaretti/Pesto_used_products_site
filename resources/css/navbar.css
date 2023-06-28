@@ -1,5 +1,5 @@
 .navbarBlur{
-    transition: 1s;
+    transition: 0.6s;
     background-color: #b2715000;
     min-height: 7vh;
 }
@@ -11,19 +11,35 @@
 
 .navbar-scroll{
     background-color: #db9320;
-    transition: 1s;
+    transition: 0.6s;
 }
 /* .counter-left{
     margin-right: 200px !important;
 } */
 
+.navLeng{
+    text-decoration: none;
+    color: black;
+}
 
 @media screen and (max-width: 450px){
     .left-counter{
         right: 135px;
+
     }
+    /* .left-counter::after{
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: green;
+        position: absolute;
+    } */
 
     .nav-color-scroll{
         background-color: #db9320;
+    }
+    .counter-left{
+        display: none;
     }
 }

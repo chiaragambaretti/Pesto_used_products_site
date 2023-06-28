@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container margin15vh">
         <div class="row my-5">
             <h1 class="text-center mb-5">{{__('ui.allAnnouncements')}}</h1>
             @forelse ($announcements as $announcement)
