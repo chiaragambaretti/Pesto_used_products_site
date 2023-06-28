@@ -33,7 +33,7 @@ header{
   }
   
 .headerBox {
-    height: 80vh;
+    height: 120vh;
     background:linear-gradient(to bottom, rgba(255, 255, 255, 0.23), rgba(0, 0, 0, 0.40)),
     url('./img/libri.jpg');
     background-attachment: fixed;
