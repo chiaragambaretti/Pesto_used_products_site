@@ -25,7 +25,7 @@ return [
     
     // INSERISCI ANNUNCIO
     'titolo' => 'Enter a title',
-    'selectCategoria' => 'Scegli una categoria',
+    'selectCategoria' => 'Choose a category',
     'descrizione' => 'Enter a description',
     'inserisciPrezzo' => 'Enter a price',
     'preview'=> 'Preview',
