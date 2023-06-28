@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container d-flex justify-content-center mt-5 header-custom-work">
+    <div class="container d-flex justify-content-center header-custom-work">
         <div class="row">
             <div class="col-12 text-center">
                 <h1 class="mt-5"><strong>{{__('ui.workLavoraCon')}}</strong></h1>
@@ -29,7 +29,7 @@
             <div class="col-12">
                 <h3 class="text-center mt-5 fw-bold">{{__('ui.inviaRichiesta')}}</h3>
                 <div class="d-flex justify-content-center">
-                    <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl mt-5" style="color: #ff0000;"></i>
+                    <i class="fa-solid fa-circle-arrow-down fa-bounce fa-2xl mt-5" style="color: #db9320;"></i>
                 </div>
                 <div class="d-flex justify-content-center">
                     <a class="m-5 a-work" href="{{route('become.revisor')}}"><button class="btn btn-revisor">{{__('ui.workDiventa')}}</button></a>

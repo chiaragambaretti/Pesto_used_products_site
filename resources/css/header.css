@@ -12,7 +12,6 @@ header{
 .header-h1::first-letter{
   color: #db9320;
   font-size: 6rem;
-  font-weight: bolder;
 }
 
 

@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-12">
                 @if (session()->has('message'))
-                <div class="alert alert-success">
+                <div class="alert alert-success mt-5">
                     {{ session('message') }}
                 </div>
                 @endif
@@ -23,9 +23,11 @@
         </div>
     </div>
 
-        
+    <main>
+
         {{$slot}}
         
+    </main>
     
     <x-footer/>
     

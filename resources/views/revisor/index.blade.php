@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container my-5">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-5 text-center fs-2">
                 {{-- verifica la presenza di annunci da revisionare --}}
                 {{$announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
             </div>

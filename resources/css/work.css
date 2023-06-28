@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     height: 5vh;
-    background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.552), rgba(248, 134, 3, 0.559));
+    background: linear-gradient(to top, rgba(219, 147, 32, 1), rgba(248, 134, 3, 0.559));
 }
 
 .btn-revisor{
-    background-color: rgb(204, 2, 2);
+    background-color: rgb(219, 147, 32);
     color: white;
     width: 300px;
     height: 50px;
@@ -17,7 +17,7 @@
 }
 
 .btn-revisor:hover{
-    background-color: rgba(168, 0, 0, 0.993);
+    background-color: #db9320;
     color: white;
 }
 
@@ -33,7 +33,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
-    /* position: relative; */
+    margin-top: 10vh;
+
     height: 80vh;
 }
 

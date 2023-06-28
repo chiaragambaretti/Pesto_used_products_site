@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbarBlur fixed-top" id="nav">
+<nav class="navbar navbar-expand-lg nav-color-scroll navbarBlur fixed-top @if(Route::currentRouteName()!= 'home') navbar-scroll @endif" id="nav">
     <div class="container-fluid">
         {{-- INSERIRE LOGO --}}
         <a class="navbar-brand text-black" href="{{ route('home')}}">Presto</a>
-        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" style="background-color: #db9320" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
@@ -31,9 +31,10 @@
                     </li>
                     @if (Auth::user()->is_revisor)
                     <li class="nav-item">
-                        <a class="nav-link text-black btn btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
+
+                        <a class="nav-link text-black btn btn-sm position-relative left-counter" aria-current="page" href="{{route('revisor.index')}}">
                             <i class="fa-solid fa-user-secret"></i> {{__('ui.revisiona')}}
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success counter-left ">
                                 {{-- contatore articoli da accettare --}}
                                 {{App\Models\Announcement::toBeRevisionedCount()}}
                                 <span class="visually-hidden">unread messages</span>
@@ -49,7 +50,7 @@
                 </ul>
                 <div>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item ">
                         <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.lingua')}}</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">

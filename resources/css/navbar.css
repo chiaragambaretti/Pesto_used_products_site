@@ -1,14 +1,7 @@
-/* .navbar-custom{
-   background-color: #fa8649;
-   background: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(248, 134, 3));
-   
-} */
 .navbarBlur{
     transition: 1s;
     background-color: #b2715000;
-    /* backdrop-filter: blur(5px) saturate(1); */
-    /* background: linear-gradient(to bottom, #b27150, transparent); */
-    /* background-color: #b27150; */
+    min-height: 7vh;
 }
 
 .hrefCustom{
@@ -19,4 +12,18 @@
 .navbar-scroll{
     background-color: #db9320;
     transition: 1s;
+}
+/* .counter-left{
+    margin-right: 200px !important;
+} */
+
+
+@media screen and (max-width: 450px){
+    .left-counter{
+        right: 135px;
+    }
+
+    .nav-color-scroll{
+        background-color: #db9320;
+    }
 }

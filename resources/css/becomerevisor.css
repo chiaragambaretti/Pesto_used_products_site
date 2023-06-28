@@ -5,14 +5,14 @@
 }
 
 .btn-makerevisor{
-    background-color: rgb(204, 2, 2);
+    background-color: #db9320;
     color: white;
     width: 300px;
     height: 50px;
 }
 
 .btn-makerevisor:hover{
-    background-color: rgba(168, 0, 0, 0.993);
+    background-color: #db9320;
     color: white;
 }
 
