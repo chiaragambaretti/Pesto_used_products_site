@@ -6,7 +6,7 @@
           <div class="card-body blurAnnunci">
             <div class="row">
               <div class="col-12 col-md-3 rounded">
-                  <a href="{{route('announcement.show', compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://picsum.photos/1200'}}"
+                  <a href="{{route('announcement.show', compact('announcement'))}}"><img src="{{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(800 , 700) : 'https://www.nbmchealth.com/wp-content/uploads/2018/04/default-placeholder.png'}}"
                     class="w-100 roundedCustom" /></a>
               </div>
               <div class="col-md-6 col-lg-6 col-xl-6 mt-2">
