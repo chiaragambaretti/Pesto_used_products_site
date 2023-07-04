@@ -7,7 +7,7 @@
                 <li><a href="https://twitter.com/?lang=it"><i class="fa-brands fa-twitter fa-xl" style="color: #db9320"></i></a></li>
                 <li><a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fit-IT&lang=en&enter_method=mandatory"><i class="fa-brands fa-tiktok fa-xl" style="color: #db9320;"></i></a></li>
             </ul>
-            <a href="{{route('home')}}" class="text-decoration-none fw-bold" style="color: #db9320"><h5 class="text-center">CIAO</a></h5>
+            <a href="{{route('home')}}" class="text-decoration-none fw-bold" style="color: #db9320"><h5 class="text-center">Presto.it</a></h5>
             <ul class="menu fw-bold">  
                 {{-- <li><a class="text-decoration-none" href="">Presto team</a></li> --}}
                 <li><a style="color: #db9320;" class="text-decoration-none" href="{{route('workwithus')}}">{{__('ui.footerLavora')}}</a></li>

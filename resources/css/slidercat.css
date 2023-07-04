@@ -1,0 +1,15 @@
+.categories{
+    background-color: #db9320;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+.a-cat{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+

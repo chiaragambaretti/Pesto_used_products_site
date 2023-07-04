@@ -38,12 +38,12 @@
     .left-counter{
         right: 353px;
     }
-    .nav-color-scroll{
-        background-color: #db9320;
-    }
     
     .counter-left{
         display: none;
     }
-
-  }
+    
+}
+.nav-color-scroll{
+    background-color: #db9320;
+}

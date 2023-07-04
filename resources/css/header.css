@@ -5,12 +5,12 @@ body {
   }
   
 header{
-  background-color: #e5e3e6;
+  background-color: #db9320;
   transition: 1s;
 }
 
 .header-h1::first-letter{
-  color: #e5e3e6;
+  color:#db9320;
   font-size: 6rem;
 }
 

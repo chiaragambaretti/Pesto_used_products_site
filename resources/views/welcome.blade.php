@@ -11,6 +11,8 @@
             </div>
         </div>
     </div>
+
+    <x-slidercat></x-slidercat>
     <div class="container">
         <h2 class="display-8 text-center fw-bold media-visit">{{__('ui.welcome')}}</h2>
     </div>

@@ -12,7 +12,7 @@
     <div class="container my-5">
         <div class="row ">
             <div class="col-12 col-md-5">
-                <div id="carouselExampleCaptions" class="carousel slide">
+                <div id="carouselExampleCaptions" class="carousel slide img-fluid">
                     @if (count($announcement_to_check->images))
                     <div class="carousel-inner">
                         @foreach ($announcement_to_check->images as $image)
