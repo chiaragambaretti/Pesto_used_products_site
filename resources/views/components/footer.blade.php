@@ -1,4 +1,4 @@
-<footer class="container-fluid footer-wrapper bg-dark">
+<footer class="container-fluid footer-wrapper w-75">
     <div class="row justify-content-around">    
         <div col-12 col-md-6 col-sm-6>
             <ul class="social-icons">   

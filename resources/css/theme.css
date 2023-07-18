@@ -1,9 +1,13 @@
+:root{
+    --color-yellow: rgb(219, 147, 32);
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
-    background-color: rgba(236, 236, 236, 0.543) !important;
+    background-color: white !important;
 }
 
 main {
@@ -26,4 +30,60 @@ main {
 
 .border-file-up{
     border: 2px solid #db9320 !important;
+}
+
+/* sezione banner info */
+.img-banner1{
+    width: 300px;
+    margin-top: 10px;
+    position: relative;
+    margin-left: 30px;
+    border-radius: 10%;
+}
+
+.img-banner2{
+    position: absolute;
+    width: 300px;
+    margin-left: -130px;
+    margin-top: 130px;
+    border-radius: 10%;
+}
+
+.margin-top{
+    margin-top: 100px;
+}
+
+@media (max-width: 767px){
+    .img-banner2{
+        display: none;
+    }
+}
+
+@media (max-width: 1080px){
+    .img-banner2{
+        margin-left: 20px;
+        margin-top: 65px;
+    }
+    .img-banner1{
+        margin-left: 20px;
+        margin-top: 65px;
+    }
+}
+
+.gestione{
+    text-decoration: none;
+}
+
+.bottone-gestione{
+    background-color: #db9320 !important;
+}
+
+.btn-profilo{
+    background-color: #db9320;
+    color: white;
+}
+
+.btn-profilo:hover{
+    background-color: #db9320;
+    color: white;
 }

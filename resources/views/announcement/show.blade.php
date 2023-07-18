@@ -41,24 +41,39 @@
           </button>
         </div>
       </div>
-
+      
       <div class="col-12 col-md-6 mt-3">
-  <a class="btn mb-3 btnShow btn-sm btn-color-show" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
+        <a class="btn mb-3 btnShow btn-sm btn-color-show" href="{{route('categoryShow', ['category'=>$announcement->category])}}">{{$announcement->category->name}}</a>
         <h2>{{$announcement->title}}</h2>
         <p><span class="h4">Inserito da: </span> {{$announcement->user->name ?? ''}}</p>     
         <p><span class="h4">Pubblicato il: </span>{{$announcement->created_at->format('d/m/Y')}}</p>
-
+        
         <p><span class="h4">Prezzo: </span><span class="h3">€{{$announcement->price}}</span></p>
       </div>
     </div>
+    
+    <div class="row my-3">
+      <div class="col-12 col-md-6">
+        <h3>{{__('ui.revisionaDesc')}}</h3>
+        <p>{{$announcement->body}}</p>
+      </div>
+    </div>
+  </div>
   
-      <div class="row my-3">
-        <div class="col-12 col-md-6">
-          <h3>{{__('ui.revisionaDesc')}}</h3>
-          <p>{{$announcement->body}}</p>
+  {{-- annunci correlati --}}
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="mb-3">Forse può interessarti anche:</h3>
+        <div class="border-bottom mb-3"></div>
+        <div class="row">
+         
+            @foreach ($related as $announcement)
+            <x-card :announcement="$announcement"></x-card>
+            @endforeach
+    
         </div>
       </div>
-
-    
+    </div>
   </div>
 </x-layout>

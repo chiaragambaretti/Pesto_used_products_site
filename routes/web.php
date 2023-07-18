@@ -3,6 +3,7 @@
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
@@ -49,7 +50,16 @@ Route::middleware(['auth'])->group(function(){
 
     // rotta che riporta alla vista lavora con noi
     Route::get('/workwithus', [FrontController::class, 'workWithUs'])->name('workwithus');
-
+    // rotta profilo utente
+    Route::get('/profile', [ProfileController::class, 'profile'])->name('user.profile');
+    // rotta dashboard
+    Route::get('/dashboard', [ProfileController::class, 'dashboard'])->name('user.dashboard');
+    // rotta cancella annuncio
+    Route::delete('delete/{id}', [AnnouncementController::class, 'delete'])->name('announcement.delete');
+    // rotte per modificare un annuncio
+    Route::get('modifica/{id}', [AnnouncementController::class, 'edit'])->name('announcement.edit');
+    Route::post('modifica/{id}', [AnnouncementController::class, 'save'])->name('announcement.save');
+  
 });
 
 // rendi utente revisore
@@ -63,3 +73,5 @@ Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('se
 
 // team
 Route::get('/team', [FrontController::class, 'teamWork'])->name('team.work');
+
+

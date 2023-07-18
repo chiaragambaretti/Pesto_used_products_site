@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg nav-color-scroll navbarBlur fixed-top @if(Route::currentRouteName()!= 'home') navbar-scroll @endif" id="nav">
     <div class="container-fluid">
         {{-- INSERIRE LOGO --}}
-        <a class="navbar-brand text-black" href="{{ route('home')}}">Presto</a>
+        <a class="navbar-brand text-black logo" href="{{ route('home')}}">Presto</a> 
         <button class="navbar-toggler" style="background-color: #db9320" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +15,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link text-black dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-list"></i>{{__('ui.navCategorie')}}</a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="background-color: #db9320">
                             @foreach ($categories as $category)
                             <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
                             @endforeach
@@ -54,9 +54,12 @@
                 <div>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         @auth
-                        <li class="nav-item">
+                        
+                        <a class="nav-link pe-3" href="{{route('user.profile')}}">Ciao {{Auth::user()->name}} </a>
+                    </li>
+                        {{-- <li class="nav-item">
                             <a class="nav-link fw-bold">{{Auth::user()->name}}</a>
-                        </li>
+                        </li> --}}
                         @endauth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,15 +1,118 @@
-.categories{
-    background-color: #db9320;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-
-}
-
 .a-cat{
     text-decoration: none;
-    color: whitesmoke;
+    color: #db9320;
     font-weight: 500;
+    margin-top: 0.5rem;
 }
 
+.container-nav{
+    width: 100%;  
+    overflow-x: none;
+    white-space: nowrap;
+  }
+
+  .liScroll{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    margin-left: 20px;
+    border-style: dotted;
+    border-color: #db9320;
+
+    transition: 0.3s ease;
+}
+
+.ulScrollX{
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+} 
+
+.cat-icon{
+    margin-left: 35px;
+}
+
+.liScroll:hover{
+    animation: pulse 0.8s;
+}
+
+@keyframes pulse{
+    0%{
+        color: #db9320;
+        transform: scale(1);
+    }
+    50%{
+        color: #db9320;
+        transform: scale(1.2);
+    }
+    100%{
+        color: #db9320;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 767px){
+    .container-nav{
+      /* width: 100%;   */
+      overflow-x: scroll;
+      padding-top: 30px;
+    }
+
+    .liScroll{
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ulScrollX{
+    white-space: nowrap;
+    }   
+
+    .a-cat{
+        display: none;
+    }
+
+    .cat-icon{
+        margin-top: -15px !important;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 1080px){
+    .container-nav{
+      /* width: 100%;   */
+      overflow-x: scroll;
+      padding-top: 30px;
+    }
+
+    .liScroll{
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ulScrollX{
+    white-space: nowrap;
+    }   
+
+    .a-cat{
+        display: none;
+    }
+
+    .cat-icon{
+        margin-top: -15px !important;
+        margin-left: 0;
+    }
+
+}
 

@@ -4,6 +4,12 @@ footer{
     position: relative;
     display: flex;
     justify-content: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #db9320;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
 }
 
 .footer-wrapper .social-icons,
@@ -36,8 +42,4 @@ footer{
 
 .footer-wrapper .menu li a:hover{
     opacity: 1;
-}
-
-:root{
-    --color-black: rgb(0, 0, 0);
 }
