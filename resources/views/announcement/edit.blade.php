@@ -42,8 +42,8 @@
                 <div>
                       {{-- carico nuove immagini --}}
 
-                <label class="form-label">Inserisci immagine</label>
-                   <input type="file" name="images" multiple>
+                <label for="images" class="form-label">Inserisci immagine</label>
+                   <input type="file" name="images[]" id="images" accept="image/*" multiple>
                   </div>
               
                   {{-- <div class="mb-3">

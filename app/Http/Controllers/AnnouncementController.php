@@ -41,7 +41,7 @@ class AnnouncementController extends Controller
 
     // salviamo le modifiche effettuate
     public function save(Request $request, $id){
-        //validiamo i dati in arrivo dal form
+        // validiamo i dati in arrivo dal form
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
@@ -53,19 +53,23 @@ class AnnouncementController extends Controller
         $announcement->body = $request->input('body');
         $announcement->price = $request->input('price');
 
-        // aggiorniamo le immagini associate agli annunci
+        // aggiornamento delle immagini associate agli annunci
         if($request->hasFile('images')){
-            $images = $request->file('images');
-                foreach($images as $image){
-                    $path = $image->store('images');
-                    $announcement->images()->create(['path' => $path]);
-                }
-            
+           
+            // elimino le immagini associate all'annuncio
+            Image::where('announcement_id', $announcement->id)->delete();
+            // carico e salvo nuove immagini
+            foreach($request->file('images') as $image) {
+                $path = $image->store('storage/announcements/21/crop_800x700'); //salva immagine nella cartella public/images - funziona
+                $img = new Image();
+                $img->announcement_id = $announcement->id;
+                $img->path = $path;
+                $img->save();
             }
-        $announcement->save();
-            
-        return redirect()->route('user.dashboard', $announcement->id)->with('message', 'Annuncio modificato con successo');
+                }
+                $announcement->save();
+                    
+                return redirect()->route('user.dashboard', $announcement->id)->with('message', 'Annuncio modificato con successo');
+            }
+
     }
-
-
-}

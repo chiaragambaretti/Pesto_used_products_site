@@ -59,7 +59,7 @@ Route::middleware(['auth'])->group(function(){
     // rotte per modificare un annuncio
     Route::get('modifica/{id}', [AnnouncementController::class, 'edit'])->name('announcement.edit');
     Route::post('modifica/{id}', [AnnouncementController::class, 'save'])->name('announcement.save');
-  
+
 });
 
 // rendi utente revisore
